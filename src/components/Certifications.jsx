@@ -9,9 +9,9 @@ import { fadeIn, textVariant } from '../utils/motion';
 
 const Card = ({ index, name, image, icon, url }) => {
   return (
-    <motion.div 
+    <div 
       variants={fadeIn("", "spring", index * 0.5, 0.75)}
-      className="xs:w-[60%] sm:w-[60%] md:w-[45%] lg:w-[38%] xl:w-[30%]"
+      className="xs:w-[90%] sm:w-[90%] md:w-[45%] lg:w-[38%] xl:w-[30%]"
     >
       <Tilt
         options={{
@@ -37,7 +37,7 @@ const Card = ({ index, name, image, icon, url }) => {
           </div>
         </div>
       </Tilt>
-    </motion.div>
+    </div>
   );
 };
 
@@ -45,11 +45,11 @@ const Certifications = () => {
   return (
     <div className='rounded-[20px]'>
       {/* <div className={`rounded-2xl min-h-[300px] ${styles.padding}`}> */}
-        <motion.div variants={textVariant()}>
+        <div variants={textVariant()}>
           <h5 className={`${styles.sectionHeadText}`}>
             Certifications.
           </h5>
-        </motion.div>
+        </div>
       {/* </div> */}
 
       <div className={`${styles.paddingX} mt-12 gap-5 flex items-stretch justify-center flex-wrap`}>
