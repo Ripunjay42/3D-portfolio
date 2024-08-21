@@ -8,9 +8,10 @@ const App = () => {
     <BrowserRouter>
       <div className="bg-primary relative z-0">
         {/* <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat"> */}
-        <div className="bg-primary">
+        <div className="relative z-0">
           <Navbar />
           <Hero />
+          <StarsCanvas />
         </div>
         <About />
         <Works />
@@ -19,7 +20,7 @@ const App = () => {
         <Certifications />
         <div className="relative z-0">
           <Contact />
-          <StarsCanvas />
+          {/* <StarsCanvas /> */}
         </div>
       </div>
     </BrowserRouter>
