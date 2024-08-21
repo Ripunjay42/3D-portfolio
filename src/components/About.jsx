@@ -1,5 +1,5 @@
 import React from 'react'
-import {Tilt} from 'react-tilt'
+import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion'
 import { styles } from '../styles'
 import { about } from '../constants'
@@ -18,9 +18,9 @@ const ServiceCard = ({ index, title, icon }) => {
       >
         <div 
         options = {{
-          max: 45, 
+          max: 10, 
           scale: 1,
-          speed: 450
+          speed: 250
         }}
         className="bg-tertiary py-5 px-12 rounded-[20px] min-h-[280px] flex flex-col justify-evenly items-center">
           <img src={icon} alt={title} className="w-36 h-30 object-contain"/>

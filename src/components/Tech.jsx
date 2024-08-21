@@ -1,39 +1,72 @@
-import React, { useEffect, useState } from 'react'
-import { technologies } from '../constants'
-import { SectionWrapper } from '../hoc'
-import { motion } from 'framer-motion'
-import { styles } from '../styles'
-import { textVariant, fadeIn } from '../utils/motion'
+import React, { useEffect, useState } from 'react';
+import { technologies } from '../constants';
+import { SectionWrapper } from '../hoc';
+import {link}  from '../assets';
+import { motion } from 'framer-motion';
+import { styles } from '../styles';
+import { textVariant, fadeIn } from '../utils/motion';
+import Tilt from 'react-parallax-tilt';
+import leetcodeIcon from '../assets/tech/leetcode.png';
+import codechefIcon from '../assets/tech/codechef.png';
+
+// Define the ServiceCard component
+const ServiceCard = ({ index, title, icon, links }) => {
+  return (
+    <Tilt 
+    tiltMaxAngleX={10} 
+    tiltMaxAngleY={10}  
+    scale={1}       
+    transitionSpeed={250} 
+    className="w-[210px]  xs:w-[200px]">
+    
+      <div className="w-[210px] xs:w-[200px]  green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+        <div
+          className="bg-tertiary py-5 px-12 rounded-[20px] min-h-[280px] flex flex-col justify-evenly items-center"
+        >
+          <img src={icon} alt={title} className="w-36 h-30 object-contain" />
+          <a href={links} target="_blank" rel="noopener noreferrer">
+          <h3 className="text-blue-500 text-[17px] underline font-bold text-center flex items-center">
+            {title}
+            <span>
+                <img src={link} alt="" className='h-3 w-3 ml-3'/>
+            </span>
+          </h3>
+          </a>
+        </div>
+      </div>
+    </Tilt>
+  );
+};
 
 const Tech = () => {
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 500px)')
-    setIsMobile(mediaQuery.matches)
+    const mediaQuery = window.matchMedia('(max-width: 500px)');
+    setIsMobile(mediaQuery.matches);
 
     const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches)
-    }
-    
-    window.addEventListener("change", handleMediaQueryChange)
+      setIsMobile(event.matches);
+    };
+
+    window.addEventListener('change', handleMediaQueryChange);
 
     return () => {
-      window.removeEventListener("change", handleMediaQueryChange)
-    }
-  }, [])
+      window.removeEventListener('change', handleMediaQueryChange);
+    };
+  }, []);
 
-  return (
-    isMobile ? null : 
+  return isMobile ? null : (
     <>
       <motion.div variants={textVariant()}>
-        <h5 className={`${styles.sectionHeadText}`}>
-          Tech Stack.
-        </h5>
+        <h5 className={`${styles.sectionHeadText}`}>Tech Stack.</h5>
       </motion.div>
-      
-      <motion.div className='mt-12 flex flex-col items-center' variants={fadeIn('', '',0.01, 1)}>
-        <div className='flex flex-row flex-wrap justify-center gap-10'>
+
+      <motion.div
+        className="mt-12 flex flex-col items-center"
+        variants={fadeIn('', '', 0.01, 1)}
+      >
+        <div className="flex flex-row flex-wrap justify-center gap-10">
           {technologies.map((tech) => (
             <div
               key={tech.name}
@@ -42,7 +75,6 @@ const Tech = () => {
                 background: 'transparent',
                 backgroundClip: 'padding-box',
                 border: '1px solid #915EFF',
-                // boxShadow: '0 0 5px rgba(138, 43, 226, 0.5)', // Faint glow by default
               }}
             >
               <div
@@ -68,10 +100,26 @@ const Tech = () => {
               `}</style>
             </div>
           ))}
-        </div>
-      </motion.div>
-    </>
-  )
-}
+          </div>
+        </motion.div>
 
-export default SectionWrapper(Tech, "tech")
+          {/* Add LeetCode and CodeChef Cards */}
+          <div className="mt-20 flex flex-wrap gap-10 justify-center">
+              <ServiceCard
+                index={technologies.length}
+                title="LeetCode"
+                icon={leetcodeIcon}
+                links="https://leetcode.com/u/Ripunjay42/"
+              />
+              <ServiceCard
+                index={technologies.length + 1}
+                title="CodeChef"
+                icon={codechefIcon}
+                links="https://www.codechef.com/users/ripunjay42"
+              />
+          </div>
+    </>
+  );
+};
+
+export default SectionWrapper(Tech, 'tech');

@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
 import { styles } from '../styles';
 import { ComputersCanvas } from './canvas';
 import wavingImage from '../assets/avatar.png';
+import { FaLaptopCode, FaLightbulb, FaTools } from 'react-icons/fa';
 
 const Hero = () => {
+  const roles = [
+    { text: "Tech Enthusiast", icon: <FaLightbulb className="inline-block text-[#5eff6c] mr-2" /> },
+    { text: "Problem Solver", icon: <FaTools className="inline-block text-[#5eff6c] mr-2" /> },
+    { text: "Fullstack Developer", icon: <FaLaptopCode className="inline-block text-[#5eff6c] mr-2" /> },
+  ];
+
+  const [currentRole, setCurrentRole] = useState(0);
+
+  const handleType = () => {
+    setCurrentRole((prevRole) => (prevRole + 1) % roles.length);
+  };
+
   return (
     <section className="relative mx-auto h-screen w-full">
       <div
@@ -21,19 +34,17 @@ const Hero = () => {
             <h1 className={`${styles.heroHeadText} text-white`}>
               Hi, I'm <span className="text-[#915EFF]">Ripunjay</span>
             </h1>
-            <p className={`${styles.heroSubText} mt-2 text-[#45e0e6]`}>
+            <p className={`${styles.heroSubText} mt-2 text-[#45e0e6] flex items-center`}>
+              {roles[currentRole].icon}
               <Typewriter
-                words={[
-                  "Tech Enthusiast",
-                  "Problem Solver",
-                  "Fullstack Developer"
-                ]}
+                words={roles.map(role => role.text)}
                 loop={true}
                 cursor
                 cursorStyle="|"
-                typeSpeed={50}
-                deleteSpeed={30}
+                typeSpeed={80}
+                deleteSpeed={40}
                 delaySpeed={1000}
+                onDelete={handleType}
               />
             </p>
           </div>
@@ -41,9 +52,6 @@ const Hero = () => {
             src={wavingImage}
             alt="Waving Avatar"
             className="h-20 w-20 sm:h-28 sm:w-28"
-            // initial={{ opacity: 0, x: 100 }}
-            // animate={{ opacity: 1, x: 0 }}
-            // transition={{ duration: 1, delay: 5 }}
           />
         </div>
       </div>

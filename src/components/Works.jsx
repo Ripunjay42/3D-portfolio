@@ -10,11 +10,10 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
 	return (
 		<motion.div variants={fadeIn('up', 'spring', 0.4 * index, 0.5)}>
 			<Tilt
-				options={{
-					max: 10,
-					scale: 1,
-					speed: 200,
-				}}
+				tiltMaxAngleX={7} 
+				tiltMaxAngleY={7}  
+				scale={1}       
+				transitionSpeed={250} 
 				className='bg-tertiary rounded-2xl xl:max-w-[362px] lg:max-w-[340px] md:max-w-[304px] h-full green-pink-gradient p-[1px]'
 			>
 				<div className='bg-tertiary w-full h-full rounded-2xl p-4 flex flex-col justify-between'>
