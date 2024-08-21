@@ -1,8 +1,17 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
+  front,
+  back,
+  devops,
+  comp,
+
+
+  jobbox,
+  tictac,
+  alumni,
+  facemask,
+  rain,
+  portfolio,
+
   c,
   cpp,
   javascript,
@@ -10,10 +19,12 @@ import {
   html,
   css,
   reactjs,
+  next,
   tailwind,
   bootstrap,
   flask,
   django,
+  express,
   nodejs,
   mysql,
   postgresql,
@@ -21,22 +32,22 @@ import {
   linux,
   bash,
   git,
-  githubactions,
   docker,
+
+  gcp,
+  dsa,
+  javacer,
+  pythoncer,
+  nse1,
+  nse2,
+  cer,
+
   meta,
   starbucks,
   tesla,
   shopify,
-  carrent,
-  jobit,
-  tripguide,
-  votify,
-  buyNsell,
-  admindashboard,
-  awsccp,
-  gcpdg,
-  az900,
-  tekion
+  cloudtel,
+  tekion,
 
 } from "../assets";
 
@@ -79,20 +90,20 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Frontend Developer",
-    icon: web,
+    title: "Frontend",
+    icon: front,
   },
   {
-    title: "Backend Developer",
-    icon: mobile,
+    title: "Backend",
+    icon: back,
   },
   {
     title: "Devops",
-    icon: backend,
+    icon: devops,
   },
   {
-    title: "Competitive Programmer",
-    icon: creator,
+    title: "SWE",
+    icon: comp,
   },
 ];
 
@@ -127,7 +138,7 @@ const technologies = [
   },
   {
     name: "Next JS",
-    icon: reactjs,
+    icon: next,
   },
   {
       name: "Tailwind CSS",
@@ -148,7 +159,7 @@ const technologies = [
   },
   {
     name: "Express JS",
-    icon: django,
+    icon: express,
   },
   {
     name: "Node JS",
@@ -185,12 +196,6 @@ const technologies = [
     name: "Docker",
     icon: docker,
   },
-
-  
-  {
-    name: "Githubactions",
-    icon: githubactions,
-  },
 ];
 
 const experiences = [
@@ -226,97 +231,201 @@ const experiences = [
 const certifications = [
   {
     name:
-      "AWS Certified Cloud Practitioner",
-    image: awsccp,
-    icon: html,
-    url: 'https://www.credly.com/badges/57074209-7830-4367-9921-62928eb57aeb/public_url'
+      "Google cloud",
+    image: gcp,
+    icon: cer,
+    url: 'https://www.cloudskillsboost.google/public_profiles/b82cdb38-86d0-4db0-a010-a4808ea5b9bc'
   },
   {
     name:
-      "Google Cloud Digital Leader",
-    image: gcpdg,
-    icon: html,
-    url: 'https://www.credential.net/b6adac8a-184c-4743-88ca-c5537628fcec?key=005f755bbbbabc1448a3463fd43634cc20af978e8e53952d2f17cf1ba9237d47&record_view=true'
+      "DSA",
+    image: dsa,
+    icon: cer,
+    url: 'https://drive.google.com/file/d/1eTIk37rO4Qt-hTHwJFCrpE-YK96dvtlC/view'
   },
   {
     name:
-    "Microsoft Azure Fundamentals",
-    image: az900,
-    icon: html,
-    url: 'https://www.credly.com/badges/ad668692-9764-4853-903d-f046266c1c15/public_url'
+    "Java",
+    image: javacer,
+    icon: cer,
+    url: 'https://drive.google.com/file/d/19_4WzlEAfSTFm8XYCLM97inMzzD-eSpp/view'
   },
-  // {
-  //   name:
-  //     "Python Basics",
-  //   image: pythoncert,
-  //   icon: hackerrank,
-  //   url: 'https://www.hackerrank.com/certificates/635cc0313ed6'
-  // },
+  {
+    name:
+      "Python",
+    image: pythoncer,
+    icon: cer,
+    url: 'https://drive.google.com/file/d/1ZXYjT2AezXiGNsiFlMVXdD_-PRHiEmxw/view'
+  },
+  {
+    name:
+      "Network Security 1",
+    image: nse1,
+    icon: cer,
+    url: 'https://drive.google.com/file/d/1-BilMhbbdWqIx5LC8KzbUwQRg9sZIW8M/view'
+  },
+  {
+    name:
+      "Network Security 2",
+    image: nse2,
+    icon: cer,
+    url: 'https://drive.google.com/file/d/1BXRIQ-Sr3PAYTVd-mRp3KPwZS_hj3ciN/view'
+  },
 ];
 
 const projects = [
   {
-    name: "Buy N Sell",
+    name: "JOBBOX:Full-Stack Job Platform",
     description:
-      "An e-commerce website that allows users to buy and sell used products. This application was hosted on AWS with the help of containers ",
+      `Full-stack job search platform with Enhanced performance through backend and client-side pagination. 
+      Implemented efficient data prefetching strategy for improved user experience and faster page loads.`,
     tags: [
       {
-        name: "devops",
+        name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "django",
+        name: "express",
         color: "green-text-gradient",
       },
       {
         name: "tailwind",
         color: "pink-text-gradient",
       },
+      {
+        name: "postgresql",
+        color: "yellow-text-gradient",
+      },
     ],
-    image: buyNsell,
-    source_code_link: "https://github.com/masif2002/buyNsell-django-app",
+    image: jobbox,
+    source_code_link: "https://github.com/Ripunjay42/JobBox.git",
+    website_link: 'https://jobbox-gules.vercel.app/',
   },
   {
-    name: "Admin Dashboard",
+    name: "TicTacToe with chat functionality",
     description:
-      "A dashboard application for an organization that allows to view the list of employees and their details",
+      "Multiplayer Tic Tac Toe game with authentication and real-time chat functionality. Players can chat in real-time while playing the game using the Stream API for messaging.",
     tags: [
       {
-        name: "html",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "css",
+        name: "express",
         color: "green-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "StreamChat Api",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: tictac,
+    source_code_link: "https://github.com/Ripunjay42/Multiplayer_TicTacToe.git",
+    website_link: "https://tictactoe-multiplayer-silk.vercel.app/",
+  },
+  {
+    name: "Alumni information system",
+    description:
+      "A web application that allows alumni to register, and an admin to review, update, and delete users. Additionally, admin can add events, and general users can visit the verified alumni.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "express",
+        color: "green-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MySql",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: alumni,
+    source_code_link: "https://github.com/Ripunjay42/alumni",
+    website_link: "https://alumni-info.vercel.app/",  
+  },
+  {
+    name: "Face mask detector",
+    description:
+      "The project is called the Face Mask Detection where it uses facial and object recognition to accurately distinguish those with or without masks. Employs TensorFlow and OpenCV to detect face masks.",
+    tags: [
+      {
+        name: "django",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "sqlite3",
+        color: "green-text-gradient",
+      },
+      {
+        name: "python",
+        color: "pink-text-gradient",
       },
       {
         name: "javascript",
         color: "pink-text-gradient",
       },
     ],
-    image: admindashboard,
-    source_code_link: "https://github.com/masif2002/admin-dashboard",
+    image: facemask,
+    source_code_link: "https://github.com/Ripunjay42/Facemask_detector",
+    website_link: "https://facemask-detector8.onrender.com/",  
   },
   {
-    name: "Votify",
+    name: "Rainfall prediction app",
     description:
-      "A simple social media application that allows users to vote for photos posted by other users on the platform",
+      "Rainfall predictor is a web app which has a Machine Learning model running at the back. The purpose of developing this app is to predict whether it will rainfall or not.",
     tags: [
       {
-        name: "fastapi",
+        name: "flask",
         color: "blue-text-gradient",
       },
       {
-        name: "postgresql",
+        name: "python",
         color: "green-text-gradient",
       },
       {
-        name: "heroku",
+        name: "sqlite3",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "bootstrap",
         color: "pink-text-gradient",
       },
     ],
-    image: votify,
-    source_code_link: "https://github.com/masif2002/fastapi",  
+    image: rain,
+    source_code_link: "https://github.com/Ripunjay42/Rainfall-prediction",
+    website_link: "https://rainfall-prediction8.onrender.com/",  
+  },
+  {
+    name: "Personal portfolio",
+    description:
+      "Developed and Designed a portfolio website as a self learning project, as learning one subject or skill at a time is always the best option.",
+    tags: [
+      {
+        name: "html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: portfolio,
+    source_code_link: "https://ripunjay-choudhury.vercel.app/",
+    website_link: "https://ripunjay-choudhury.vercel.app/",  
   },
 ];
 

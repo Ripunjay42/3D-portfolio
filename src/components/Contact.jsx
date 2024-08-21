@@ -26,20 +26,14 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-
+    console.log(form); 
     setLoading(true)
 
     emailjs.send(
-      'service_nhq6kus',
-      'template_jb8oylu',
-      {
-        from_name: form.name,
-        from_email: form.email,
-        to_name: 'Mohamed Asif',
-        to_email: 'asifthelazycoder@gmail.com',
-        message: form.message
-      },
-      'kqnoczsL0DVGRYiCD',
+      'service_ppggetc',
+      'template_o5idby3',
+      form,
+      'eZlX0ZPyVjb0fuMm-',
     ).then(() => {
 
       setLoading(false)
@@ -73,7 +67,7 @@ const Contact = () => {
         <form 
           ref={formRef}
           onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8">
+          className="mt-12 flex flex-col gap-4">
 
           <label className='flex flex-col'>
             <span className="text-white font-medium mb-4">Your Name</span>
