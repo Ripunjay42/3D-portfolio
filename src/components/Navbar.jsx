@@ -92,7 +92,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <ul className="list-none hidden lg:flex flex-row gap-10">
+        <ul className="list-none hidden xl:flex flex-row gap-10">
           {navLinks.map((link) => {
             const Icon = link.icon;
             return (
@@ -131,7 +131,7 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <div className="lg:hidden flex flex-1 justify-end items-center">
+        <div className="xl:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
