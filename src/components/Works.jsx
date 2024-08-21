@@ -24,7 +24,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
               <img
                 src={image}
                 alt={name}
-                className='w-full h-auto max-h-[210px] rounded-[10px] object-cover border-[1px] border-secondary'
+                className='w-full h-[210px] rounded-[10px] object-cover border-[1px] border-secondary'
               />
             </div>
             <div className='mt-5'>
