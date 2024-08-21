@@ -42,12 +42,7 @@ import {
   nse2,
   cer,
 
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  cloudtel,
-  tekion,
+  gdsc,
 
 } from "../assets";
 
@@ -102,7 +97,7 @@ const services = [
     icon: devops,
   },
   {
-    title: "SWE",
+    title: "SDE",
     icon: comp,
   },
 ];
@@ -200,32 +195,17 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Frontend Developer Intern",
-    company_name: "Tekion",
-    icon: html,
-    iconBg: "#00bfa4",
-    date: "Dec 2022 - Jan 2023",
+    title: "Core Development Member",
+    company_name: "GDSC Tezpur University",
+    icon: gdsc,
+    iconBg: "#013247",
+    date: "Aug 2023 - June 2024",
     points: [
-      "Built a strong foundation on the fundamentals of HTML, CSS & JavaScript",
-      "Improved on efficient methods of developing a web application",
-      "Insights on industry Standards for web development"
+      "Participated in a team-based project, working with fellow developers to design and implement the GDSC Tezpur University website,",
+      "Applied proficiency in front-end technologies (such as HTML, CSS, JavaScript, React)",
+      "Utilized Git for version control, managing code changes, and contributing to project documentation"
     ],
   },
-  {
-    title: "Software Developer Intern",
-    company_name: "CloudTel Solutions",
-    icon: html,
-    iconBg: "#FFF",
-    date: "July 2022 - August 2022",
-    points: [
-      "Worked with AWS Services such as Amazon EC2, S3, VPC, IAM, ECR ...",
-      "Interacted with AWS Services using the AWS CLI and the Python SDK (Boto3)",
-      "Created shell Scripts to bootstrap a server and then create an AMI",
-      "Adopted exclusively to Linux OS (Ubuntu) for day-to-day tasks",
-      "Deployed application on containers to production",
-      "Configured webservers to serve static files and installed SSL certificates for the domain"
-    ],
-  }
 ];
 
 const certifications = [
@@ -259,14 +239,14 @@ const certifications = [
   },
   {
     name:
-      "Network Security 1",
+      "NSE 1",
     image: nse1,
     icon: cer,
     url: 'https://drive.google.com/file/d/1-BilMhbbdWqIx5LC8KzbUwQRg9sZIW8M/view'
   },
   {
     name:
-      "Network Security 2",
+      "NSE 2",
     image: nse2,
     icon: cer,
     url: 'https://drive.google.com/file/d/1BXRIQ-Sr3PAYTVd-mRp3KPwZS_hj3ciN/view'

@@ -32,7 +32,7 @@ const Tech = () => {
         </h5>
       </motion.div>
       
-      <motion.div className='mt-16 flex flex-col items-center' variants={fadeIn('', '',0.01, 1)}>
+      <motion.div className='mt-12 flex flex-col items-center' variants={fadeIn('', '',0.01, 1)}>
         <div className='flex flex-row flex-wrap justify-center gap-10'>
           {technologies.map((tech) => (
             <div
@@ -41,7 +41,8 @@ const Tech = () => {
               style={{
                 background: 'transparent',
                 backgroundClip: 'padding-box',
-                border: '1px solid blueViolet',
+                border: '1px solid #915EFF',
+                // boxShadow: '0 0 5px rgba(138, 43, 226, 0.5)', // Faint glow by default
               }}
             >
               <div
@@ -59,6 +60,12 @@ const Tech = () => {
                   {tech.name}
                 </div>
               </div>
+
+              <style jsx>{`
+                .group:hover {
+                  box-shadow: 0 0px 7px #915EFF;
+                }
+              `}</style>
             </div>
           ))}
         </div>
@@ -68,4 +75,3 @@ const Tech = () => {
 }
 
 export default SectionWrapper(Tech, "tech")
-

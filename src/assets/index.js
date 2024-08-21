@@ -55,12 +55,7 @@ import nse2 from './cert/NSE2_cer.png'
 import cer from './cert/cer.png'
 
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
-import cloudtel from "./company/cloudtel.png";
-import tekion from "./company/tekion.png";
+import gdsc from './exp/gdsc.png'
 
 
 export {
@@ -119,11 +114,6 @@ export {
   nse2,
   cer,
 
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  cloudtel,
-  tekion,
+  gdsc,
 
 };

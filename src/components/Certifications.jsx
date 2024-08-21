@@ -11,7 +11,7 @@ const Card = ({ index, name, image, icon, url }) => {
   return (
     <motion.div 
       variants={fadeIn("", "spring", index * 0.5, 0.75)}
-      className="xs:w-full sm:w-[30%] md:w-[30%] lg:w-[30%]"
+      className="xs:w-[60%] sm:w-[60%] md:w-[45%] lg:w-[38%] xl:w-[30%]"
     >
       <Tilt
         options={{
@@ -21,8 +21,8 @@ const Card = ({ index, name, image, icon, url }) => {
         }}
         className='bg-tertiary rounded-2xl h-full green-pink-gradient p-[1px]'
       >
-        <div className="bg-black-200 p-4 rounded-2xl h-full flex flex-col justify-between">
-          <img src={image} className=' h-[190px] rounded-[10px] object-cover border-[1px] border-secondary' alt='Certificate'/>
+        <div className="bg-black-200 p-4 rounded-2xl w-full h-full flex flex-col justify-between">
+          <img src={image} className=' w-[300px] h-[190px] rounded-[10px] object-cover border-[1px] border-secondary' alt='Certificate'/>
           
           <div className="mt-7 flex justify-between items-center gap-1">
             <a className='hover:underline hover:underline-offset-1 cursor-pointer' href={url} target='_blank' rel="noopener noreferrer">
@@ -52,7 +52,7 @@ const Certifications = () => {
         </motion.div>
       {/* </div> */}
 
-      <div className={`${styles.paddingX} mt-16 flex flex-wrap gap-7 justify-center`}>
+      <div className={`${styles.paddingX} mt-12 gap-5 flex items-stretch justify-center flex-wrap`}>
         {certifications.map((certification, index) => (
           <Card 
             key={certification.name}
