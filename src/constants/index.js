@@ -308,7 +308,7 @@ const projects = [
     website_link: "https://tictactoe-multiplayer-silk.vercel.app/",
   },
   {
-    name: "Alumni information system",
+    name: "Alumni information",
     description:
       "A web application that allows alumni to register, and an admin to review, update, and delete users. Additionally, admin can add events, and general users can visit the verified alumni.",
     tags: [
