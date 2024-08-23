@@ -5,6 +5,7 @@ import { styles } from '../styles';
 import { ComputersCanvas } from './canvas';
 import wavingImage from '../assets/avatar.png';
 import dancingGif from '../assets/dance.gif';
+import dancingPng from '../assets/dance.png';
 import { FaLaptopCode, FaLightbulb, FaTools } from 'react-icons/fa';
 import SpeakerWave from './SpeakerWave';
 import { AudioContext } from '../AudioContext.jsx';
@@ -59,7 +60,7 @@ const Hero = () => {
                 alt="Waving Avatar"
                 className="h-20 w-20 sm:h-28 sm:w-28 mt-2" // Adjust `mt-2` to control spacing
               />
-              <div className="relative flex items-center justify-center h-20 md:top-[-20px] sm:top-[-10px] top-[-10px] lg:top-[-20px]">
+              <div className="relative flex items-center justify-center h-20 md:top-[-22px] sm:top-[-14px] top-[-14px] lg:top-[-24px]">
                 <SpeakerWave isPlaying={isPlaying} isMuted={isMuted} />
               </div>
               <div className="relative " style={{top:'10px'}}>
@@ -67,7 +68,14 @@ const Hero = () => {
                     <img
                       src={dancingGif}
                       alt="Dancing GIF"
-                      className="lg:h-[180px] md:h-[160px] sm:h-[140px]  h-[100px] ml-16  md:ml-24  lg:ml-28 "
+                      className="lg:h-[170px] md:h-[160px] sm:h-[140px]  h-[100px] ml-15  md:ml-24  lg:ml-24 "
+                    />
+                  )}
+                  {(!isPlaying || isMuted) && (
+                    <img
+                      src={dancingPng}
+                      alt="Dancing png"
+                      className="lg:h-[170px] md:h-[160px] sm:h-[140px]  h-[100px] ml-16  md:ml-24  lg:ml-24 "
                     />
                   )}
                 </div>

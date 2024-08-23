@@ -53,29 +53,7 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('scroll', navbarHighlighter);
     };
-  }, []); // Add isMuted to the dependency array
-
-  // Toggle mute/unmute and play/pause the audio
-
-  // const handleMuteToggle = () => {
-  //   setIsMuted(prevMuted => {
-  //     if (audioRef.current) {
-  //       audioRef.current.muted = !prevMuted;
-  //     }
-  //     return !prevMuted;
-  //   });
-  // };
-
-  // const handlePlay = async () => {
-  //   if (audioRef.current) {
-  //     try {
-  //       await audioRef.current.play();
-  //       setCanAutoplay(true);
-  //     } catch (error) {
-  //       console.error("Audio playback failed:", error);
-  //     }
-  //   }
-  // };
+  }, []); 
 
   return (
     <nav
@@ -87,7 +65,7 @@ const Navbar = () => {
         <div className="flex gap-4 items-center">
           <Link
             to="/"
-            className="flex items-center gap-4"
+            className="flex items-center cursor-pointer"
             onClick={() => {
               setActive('home');
               window.scrollTo(0, 0);
@@ -103,7 +81,7 @@ const Navbar = () => {
               <a
                 href="https://www.linkedin.com/in/ripunjay-choudhury-83864524b/"
                 target="_blank"
-                className="group relative rounded-full border-[1px] border-[#915EFF] p-2 transition-transform duration-300 hover:shadow-violet-700 hover:shadow-md hover:scale-105"
+                className="group relative rounded-full border-[2px] border-[#915EFF] p-2 transition-transform duration-300 hover:shadow-violet-700 hover:shadow-md hover:scale-105"
               >
                 <img src={linkedin} alt="LinkedIn" className="h-5 w-5" />
                 <span className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
@@ -113,7 +91,7 @@ const Navbar = () => {
               <a
                 href="https://github.com/Ripunjay42"
                 target="_blank"
-                className="group relative rounded-full border-[1px] border-[#915EFF] p-2 transition-transform duration-300 hover:shadow-violet-700 hover:shadow-md hover:scale-105"
+                className="group relative rounded-full border-[2px] border-[#915EFF] p-2 transition-transform duration-300 hover:shadow-violet-700 hover:shadow-md hover:scale-105"
               >
                 <img src={githubs} alt="GitHub" className="h-5 w-5" />
                 <span className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
@@ -173,7 +151,7 @@ const Navbar = () => {
           )}
         </button>
       ) : (
-        <button onClick={togglePlay} className="ml-4 cursor-pointer flex gap-2">
+        <button onClick={togglePlay} className="ml-4 cursor-pointer flex gap-1">
             <span className="animate-bowText text-[18px] font-bold">
               play
             </span>
@@ -258,26 +236,6 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-
-        {/* Mute/Unmute Button */}
-        {/* {canAutoplay ? (
-        <button onClick={toggleMute} className={`ml-4 relative rounded-full p-2 transition-all duration-300 ${isMuted ? '' : 'animate-glow'}`}>
-          {isMuted ? (
-            <FaVolumeMute className="w-5 h-5 text-white" />
-        
-          ) : (
-              <FaVolumeUp className="w-5 h-5 text-white animate-dance"/>
-          )}
-        </button>
-      ) : (
-        <button onClick={togglePlay} className="ml-4 cursor-pointer flex gap-2">
-            <span className="animate-bowText text-[18px] font-bold">
-              play
-            </span>
-           <FaMusic className="w-5 h-7 text-white animate-dance" />
-          <FaPlay className="w-5 h-7 text-white animate-dance" /> 
-        </button>
-      )} */}
     </div>
     </nav>
   );
