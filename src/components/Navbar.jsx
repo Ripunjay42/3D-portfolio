@@ -1,19 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
 import { menu, close, linkedin, githubs, logo } from '../assets';
-import { FaFileAlt } from 'react-icons/fa';
+import { FaFileAlt, FaVolumeMute, FaVolumeUp, FaPlay} from 'react-icons/fa'; // Import Font Awesome icons
+import { AudioContext } from '../AudioContext'; // Import the music file
+
 
 const Navbar = () => {
   const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { isPlaying, isMuted, canAutoplay, togglePlay, toggleMute } = useContext(AudioContext);
 
   const resumeLink = {
     id: 'resume',
     title: 'Resume',
-    url: 'https://drive.google.com/file/d/1GgtkrPsKERVkkUxn2GrA_xgi9sFWQTBK/view?usp=sharing', // Replace with your actual Google Drive link
+    url: 'https://drive.google.com/file/d/1GgtkrPsKERVkkUxn2GrA_xgi9sFWQTBK/view?usp=sharing',
   };
 
   useEffect(() => {
@@ -50,11 +53,33 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('scroll', navbarHighlighter);
     };
-  }, []);
+  }, []); // Add isMuted to the dependency array
+
+  // Toggle mute/unmute and play/pause the audio
+
+  // const handleMuteToggle = () => {
+  //   setIsMuted(prevMuted => {
+  //     if (audioRef.current) {
+  //       audioRef.current.muted = !prevMuted;
+  //     }
+  //     return !prevMuted;
+  //   });
+  // };
+
+  // const handlePlay = async () => {
+  //   if (audioRef.current) {
+  //     try {
+  //       await audioRef.current.play();
+  //       setCanAutoplay(true);
+  //     } catch (error) {
+  //       console.error("Audio playback failed:", error);
+  //     }
+  //   }
+  // };
 
   return (
     <nav
-      className={`${styles.paddingX} fixed top-0 z-20 flex w-full items-center py-5 ${
+      className={`${styles.paddingX} fixed top-0 z-20 flex w-full items-center py-4 ${
         scrolled ? 'bg-primary' : 'bg-transparent'
       }`}
     >
@@ -92,7 +117,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <ul className="list-none hidden xl:flex flex-row gap-10">
+        <ul className="list-none hidden xl:flex flex-row gap-12">
           {navLinks.map((link) => {
             const Icon = link.icon;
             return (
@@ -139,16 +164,16 @@ const Navbar = () => {
             onClick={() => setToggle(!toggle)}
           />
 
-            <div
-              className={`${
-                toggle ? 'translate-x-0' : 'translate-x-full'
-              } px-8 py-10 bg-black border-[1px] border-green-400 absolute top-20 right-0 min-w-[140px] z-10 rounded-xl transition-transform duration-300 transform-gpu`}
-              style={{
-                transform: toggle ? 'translateX(0)' : 'translateX(100%)',
-                right: toggle ? '0' : '-100%',
-              }}
-            >
-              <ul className="list-none flex flex-col items-start justify-end gap-4">
+          <div
+            className={`${
+              toggle ? 'translate-x-0' : 'translate-x-full'
+            } px-8 py-10 bg-black border-[1px] border-green-400 absolute top-20 right-0 min-w-[140px] z-10 rounded-xl transition-transform duration-300 transform-gpu`}
+            style={{
+              transform: toggle ? 'translateX(0)' : 'translateX(100%)',
+              right: toggle ? '0' : '-100%',
+            }}
+          >
+            <ul className="list-none flex flex-col items-start justify-end gap-4">
               {navLinks.map((link) => {
                 const Icon = link.icon;
                 return (
@@ -208,7 +233,25 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-      </div>
+
+        {/* Mute/Unmute Button */}
+        {canAutoplay ? (
+        <button onClick={toggleMute} className={`ml-4 relative rounded-full p-2 transition-all duration-300 ${isMuted ? '' : 'animate-glow'}`}>
+          {isMuted ? (
+            <FaVolumeMute className="w-5 h-5 text-white" />
+          ) : (
+              <FaVolumeUp className="w-5 h-5 text-white"/>
+          )}
+        </button>
+      ) : (
+        <button onClick={togglePlay} className="ml-4 cursor-pointer flex gap-2">
+            <span className="animate-bowText text-[18px] font-bold">
+              Play
+            </span>
+          <FaPlay className="w-5 h-7 text-white" /> 
+        </button>
+      )}
+    </div>
     </nav>
   );
 };

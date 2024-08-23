@@ -212,5 +212,62 @@ textarea {
 }
 
 
+@keyframes rainbowText {
+  0% {
+    color: #915EFF;
+  }
+  20% {
+    color: #046b8a;
+  }
+  40% {
+    color: #915EFF;
+  }
+  60% {
+    color: #00ddff;
+  }
+  80% {
+    color: #915EFF;
+  }
+  100% {
+    color: #218b06;
+  }
+}
+
+.animate-rainbowText {
+  animation: rainbowText 8s linear infinite; /* Adjust duration and timing as needed */
+}
 
 
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 2px #ff00de, 0 0 4px #ff00de, 0 0 7px #ff00de; }
+  50% { box-shadow: 0 0 5px #00ffff, 0 0 9px #00ffff, 0 0 10px #00ffff; }
+}
+
+.animate-glow {
+  animation: glow 1.2s infinite;
+}
+
+@keyframes bowText {
+  0% {
+    color: #20eb5d;
+  }
+  20% {
+    color: #2ad0e6;
+  }
+  40% {
+    color: #eb33e1;
+  }
+  60% {
+    color: #5fe729;
+  }
+  80% {
+    color: #1cc7e6;
+  }
+  100% {
+    color: #d82d2d;
+  }
+}
+
+.animate-bowText {
+  animation: bowText 3s linear infinite; /* Adjust duration and timing as needed */
+}

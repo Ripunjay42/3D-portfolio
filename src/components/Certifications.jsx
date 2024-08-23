@@ -15,14 +15,14 @@ const Card = ({ index, name, image, icon, url }) => {
     >
       <Tilt
         options={{
-          max: 10,
+          max: 12,
           scale: 1,
           speed: 200,
         }}
-        className='bg-tertiary rounded-2xl h-full green-pink-gradient p-[1px]'
+        className='bg-tertiary rounded-2xl h-full green-pink-gradient p-[1px] min-h-[290px] shadow-card'
       >
         <div className="bg-black-200 p-4 rounded-2xl w-full h-full flex flex-col justify-between">
-          <img src={image} className=' w-[300px] h-[190px] rounded-[10px] object-cover border-[1px] border-secondary' alt='Certificate'/>
+          <img src={image} className=' w-full h-[190px] rounded-[10px] object-cover border-[1px] border-secondary' alt='Certificate'/>
           
           <div className="mt-7 flex justify-between items-center gap-1">
             <a className='hover:underline hover:underline-offset-1 cursor-pointer' href={url} target='_blank' rel="noopener noreferrer">
@@ -52,7 +52,7 @@ const Certifications = () => {
         </div>
       {/* </div> */}
 
-      <div className={`${styles.paddingX} mt-12 gap-5 flex items-stretch justify-center flex-wrap`}>
+      <div className={`${styles.paddingX} mt-12 gap-8 flex items-stretch justify-center flex-wrap`}>
         {certifications.map((certification, index) => (
           <Card 
             key={certification.name}

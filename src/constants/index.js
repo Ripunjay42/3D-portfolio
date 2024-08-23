@@ -257,7 +257,7 @@ const projects = [
   {
     name: "JOBBOX:Full-Stack Job Platform",
     description:
-      `Full-stack job search platform with Enhanced performance through backend and client-side pagination. 
+      `job search platform with Enhanced performance through backend and client-side pagination. 
       Implemented efficient data prefetching strategy for improved user experience and faster page loads.`,
     tags: [
       {
@@ -299,7 +299,7 @@ const projects = [
         color: "pink-text-gradient",
       },
       {
-        name: "StreamChat Api",
+        name: "StreamChat",
         color: "blue-text-gradient",
       },
     ],
@@ -308,7 +308,7 @@ const projects = [
     website_link: "https://tictactoe-multiplayer-silk.vercel.app/",
   },
   {
-    name: "Alumni information",
+    name: "Alumni Information System ",
     description:
       "A web application that allows alumni to register, and an admin to review, update, and delete users. Additionally, admin can add events, and general users can visit the verified alumni.",
     tags: [
@@ -326,7 +326,7 @@ const projects = [
       },
       {
         name: "MySql",
-        color: "pink-text-gradient",
+        color: "green-text-gradient",
       },
     ],
     image: alumni,
@@ -352,7 +352,7 @@ const projects = [
       },
       {
         name: "javascript",
-        color: "pink-text-gradient",
+        color: "blue-text-gradient",
       },
     ],
     image: facemask,
@@ -378,7 +378,7 @@ const projects = [
       },
       {
         name: "bootstrap",
-        color: "pink-text-gradient",
+        color: "green-text-gradient",
       },
     ],
     image: rain,

@@ -24,6 +24,10 @@ module.exports = {
 				secondary_old: '#aaa6c3',
 				tertiary_old: '#151030',
 				transp90: 'rgb(9, 11, 24, 0.9)',
+        neon: {
+          green: '#39FF14',
+          pink: '#FF007F',
+        },
       },
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",

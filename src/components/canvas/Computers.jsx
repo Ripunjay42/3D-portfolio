@@ -5,7 +5,7 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 import CanvasLoader from '../Loader'
 import Loader from '../Loader'
 
-const Computers = ({ isMobile }) => {
+const Computers = ({ isMobile, mini }) => {
   const computer = useGLTF('./desktop_pc/scene.gltf')
 
 
@@ -25,110 +25,61 @@ const Computers = ({ isMobile }) => {
       />
       <primitive 
         object={computer.scene}
-        scale={isMobile ? 0.38: 0.60}
-        position={isMobile ? [0, -1.6, -0.5] : [0, -3.2, -1.35]}
-        rotation={isMobile?[0.02, 0.6, -0.14]:[-0.01, -0.1, -0.1]}
+        scale={isMobile ? (mini ? 0.26 : 0.38) : 0.55}
+        position={isMobile ? [0, -2.2, -0.5] : [0, -3.2, -1.35]}
+        rotation={isMobile?[-0.001, 0.6, -0.14]:[-0.001, 0.3, -0.1]}
           />
     </mesh>
   )
 }
 
 const ComputersCanvas = () => {
-	const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [mini, setMini] = useState(false);
 
-	useEffect(() => {
-		//* Add a listener for changes to the screen size
-		const mediaQueryMobile = window.matchMedia('(max-width: 1100px)');
+  useEffect(() => {
+    const mediaQueryMobile = window.matchMedia('(max-width: 1100px)');
+    const mediaQueryMini = window.matchMedia('(max-width: 500px)');
 
-		//* Set the initial value of the `isMobile` state variable
-		setIsMobile(mediaQueryMobile.matches);
+    setIsMobile(mediaQueryMobile.matches);
+    setMini(mediaQueryMini.matches);
 
-		//* Define a callback function to handle changes to the media query
-		const handleMediaQueryChange = event => {
-			setIsMobile(event.matches);
-		};
+    const handleMediaQueryChange = event => {
+      setIsMobile(event.matches);
+    };
 
-		//* Add the callback function as a listener for changes to the media query
-		mediaQueryMobile.addEventListener('change', handleMediaQueryChange);
+    const handleMediaQueryChangeMini = event => {
+      setMini(event.matches);
+    };
 
-		//* Remove the listener when  the component is unmounted
-		return () => {
-			mediaQueryMobile.removeEventListener('change', handleMediaQueryChange);
-		};
-	}, []);
+    mediaQueryMobile.addEventListener('change', handleMediaQueryChange);
+    mediaQueryMini.addEventListener('change', handleMediaQueryChangeMini);
 
+    return () => {
+      mediaQueryMobile.removeEventListener('change', handleMediaQueryChange);
+      mediaQueryMini.removeEventListener('change', handleMediaQueryChangeMini);
+    };
+  }, []);
 
-//   return ( isMobile ? null :
-//     <Canvas
-//       frameloop='demand'
-//       shadows
-//       dpr={[1, 2]}
-//       camera={{ position: [20, 30, 5], fov: 25 }}
-//       gl={{ preserveDrawingBuffer: true }}
-//     >
-
-//       <Suspense fallback={<CanvasLoader />}>
-//         <OrbitControls 
-//           enableZoom={false}
-//           maxPolarAngle={Math.PI / 2}
-//           minPolarAngle={Math.PI / 2}
-//         />
-//         <Computers isMobile={isMobile} />
-//       </Suspense>
-
-//       <Preload all />
-      
-//     </Canvas>
-//   )
-// }
-// return (
-//   <>
-//     {isMobile ? (
-//       <></>
-//     ) : (
-//       <Canvas
-//         frameloop="demand"
-//         shadows
-//         dpr={[1, 2]}
-//         camera={{ position: [20, 3, 5], fov: 25 }}
-//         gl={{ preserveDrawingBuffer: true }}
-//       >
-//         <Suspense fallback={<CanvasLoader />}>
-//           <OrbitControls
-//             enableZoom={false}
-//             maxPolarAngle={Math.PI / 2}
-//             minPolarAngle={Math.PI / 2}
-//           />
-//           <Computers isMobile={isMobile} />
-//         </Suspense>
-//         <Preload all />
-//       </Canvas>
-//     )}
-//   </>
-// );
-// };
-
-return (
-  <Canvas
-    frameloop='demand'
-    shadows
-    camera={{ position: [20, 3, 5], fov: 25 }}
-    dpr={[1, 2]}
-    gl={{ preserveDrawingBuffer: true }}
-  >
-    <Suspense fallback={<CanvasLoader />}>
-      <OrbitControls
-        enableZoom={false}
-        maxPolarAngle={Math.PI / 2}
-        minPolarAngle={Math.PI / 2}
-      />
-      <Computers isMobile={isMobile} />
-    </Suspense>
-
-    <Preload all />
-  </Canvas>
-);
+  return (
+    <Canvas
+      frameloop='demand'
+      shadows
+      camera={{ position: [20, 3, 5], fov: 25 }}
+      dpr={[1, 2]}
+      gl={{ preserveDrawingBuffer: true }}
+    >
+      <Suspense fallback={<CanvasLoader />}>
+        <OrbitControls
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+        />
+        <Computers isMobile={isMobile} mini={mini} />
+      </Suspense>
+      <Preload all />
+    </Canvas>
+  );
 };
-
 
 export default ComputersCanvas;

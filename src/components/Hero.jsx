@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
 import { styles } from '../styles';
 import { ComputersCanvas } from './canvas';
 import wavingImage from '../assets/avatar.png';
 import { FaLaptopCode, FaLightbulb, FaTools } from 'react-icons/fa';
+import SpeakerWave from './SpeakerWave';
+import { AudioContext } from '../AudioContext.jsx';
 
 const Hero = () => {
   const roles = [
@@ -14,6 +16,7 @@ const Hero = () => {
   ];
 
   const [currentRole, setCurrentRole] = useState(0);
+  const { isPlaying, isMuted } = useContext(AudioContext);
 
   const handleType = () => {
     setCurrentRole((prevRole) => (prevRole + 1) % roles.length);
@@ -30,29 +33,36 @@ const Hero = () => {
         </div>
 
         <div className="flex items-center">
-          <div className="mr-4">
-            <h1 className={`${styles.heroHeadText} text-white`}>
-              Hi, I'm <span className="text-[#915EFF]">Ripunjay</span>
-            </h1>
-            <p className={`${styles.heroSubText} mt-2 text-[#45e0e6] flex items-center`}>
-              {roles[currentRole].icon}
-              <Typewriter
-                words={roles.map(role => role.text)}
-                loop={true}
-                cursor
-                cursorStyle="|"
-                typeSpeed={80}
-                deleteSpeed={40}
-                delaySpeed={1000}
-                onDelete={handleType}
+          <div className="mr-2 flex flex-col lg:flex-row lg:items-left">
+            <div>
+              <h1 className={`${styles.heroHeadText} text-white`}>
+                Hi, I'm <span className="animate-rainbowText">Ripunjay</span>
+              </h1>
+              <p className={`${styles.heroSubText} mt-2 text-[#45e0e6] flex items-center`}>
+                {roles[currentRole].icon}
+                <Typewriter
+                  words={roles.map((role) => role.text)}
+                  loop={true}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={80}
+                  deleteSpeed={40}
+                  delaySpeed={1000}
+                  onDelete={handleType}
+                />
+              </p>
+            </div>
+            <div className="flex items-center gap-3 md:ml-4">
+              <img
+                src={wavingImage}
+                alt="Waving Avatar"
+                className="h-20 w-20 sm:h-28 sm:w-28 mt-2" // Adjust `mt-2` to control spacing
               />
-            </p>
+              <div className="relative " style={{ top: '-20px' }}>
+                <SpeakerWave isPlaying={isPlaying} isMuted={isMuted} />
+              </div>
+            </div>
           </div>
-          <img
-            src={wavingImage}
-            alt="Waving Avatar"
-            className="h-20 w-20 sm:h-28 sm:w-28"
-          />
         </div>
       </div>
 

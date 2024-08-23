@@ -8,17 +8,17 @@ import { fadeIn, textVariant } from '../utils/motion';
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link, website_link }) => {
   return (
-	<div 
-	className="xs:w-[90%] sm:w-[90%] md:w-[45%] lg:w-[38%] xl:w-[30%]"
-  >
+    <div 
+      className="w-full sm:w-[90%] md:w-[45%] lg:w-[38%] xl:w-[30%]"
+    >
       <Tilt
-        tiltMaxAngleX={7} 
-        tiltMaxAngleY={7}  
+        tiltMaxAngleX={12} 
+        tiltMaxAngleY={12}  
         scale={1}       
         transitionSpeed={250} 
-        className='bg-tertiary rounded-2xl w-full sm:w-[362px] flex-shrink-0 green-pink-gradient p-[1px]'
+        className='bg-tertiary rounded-2xl w-full flex-shrink-0 green-pink-gradient p-[1px] '
       >
-        <div className='bg-tertiary w-full h-full rounded-2xl p-4 flex flex-col justify-between'>
+        <div className='bg-tertiary w-full  rounded-2xl p-4 flex flex-col justify-between min-h-[590px] shadow-card'>
           <div>
             <div className='relative w-full rounded-2xl'>
               <img
@@ -57,6 +57,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
     </div>
   );
 };
+
 
 const Works = () => {
   return (

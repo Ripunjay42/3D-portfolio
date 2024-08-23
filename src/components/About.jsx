@@ -18,7 +18,7 @@ const ServiceCard = ({ index, title, icon }) => {
       >
         <div 
         options = {{
-          max: 10, 
+          max: 12, 
           scale: 1,
           speed: 250
         }}
@@ -51,7 +51,7 @@ const About = () => {
         
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10 justify-center">
+      <div className="mt-20 flex flex-wrap gap-8 justify-center">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

@@ -1,30 +1,32 @@
-import { BrowserRouter } from "react-router-dom"
-
-import { About, Contact, Experience, Certifications, Hero, Navbar, Tech, Works, StarsCanvas } from './components'
+import React from 'react';
+import { BrowserRouter } from "react-router-dom";
+import { AudioProvider } from './AudioContext';
+import { About, Contact, Experience, Certifications, Hero, Navbar, Tech, Works, StarsCanvas } from './components';
 
 const App = () => {
-
   return (
-    <BrowserRouter>
-      <div className="bg-primary relative z-0">
-       <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
-          <Navbar />
+    <AudioProvider>
+      <BrowserRouter>
+        <div className="bg-primary relative z-0">
+          <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
+            <Navbar />
+            <div className="relative z-0">
+              <Hero />
+              <StarsCanvas />
+            </div>
+          </div>
+          <About />
+          <Works />
+          <Experience />
+          <Tech />
+          <Certifications />
           <div className="relative z-0">
-            <Hero />
-            <StarsCanvas />
+            <Contact />
           </div>
         </div>
-        <About />
-        <Works />
-        <Experience />
-        <Tech />
-        <Certifications />
-        <div className="relative z-0">
-          <Contact />
-        </div>
-      </div>
-    </BrowserRouter>
-  )
-}
+      </BrowserRouter>
+    </AudioProvider>
+  );
+};
 
-export default App
+export default App;

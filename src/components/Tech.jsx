@@ -13,8 +13,8 @@ import codechefIcon from '../assets/tech/codechef.png';
 const ServiceCard = ({ index, title, icon, links }) => {
   return (
     <Tilt
-      tiltMaxAngleX={10}
-      tiltMaxAngleY={10}
+      tiltMaxAngleX={15}
+      tiltMaxAngleY={15}
       scale={1}
       transitionSpeed={250}
       className="w-[210px] xs:w-[200px]"
@@ -64,7 +64,7 @@ const Tech = () => {
         className="mt-12 flex flex-col items-center"
         variants={fadeIn('', '', 0.01, 1)}
       >
-        <div className="flex flex-row flex-wrap justify-center gap-10">
+        <div className="flex flex-row flex-wrap justify-center gap-8">
           {technologies.map((tech) => (
             <div
               key={tech.name}
@@ -102,7 +102,7 @@ const Tech = () => {
       </div>
 
       {/* Add LeetCode and CodeChef Cards */}
-      <div className="mt-20 flex flex-wrap gap-10 justify-center">
+      <div className="mt-20 flex flex-wrap gap-8 justify-center">
         <ServiceCard
           index={technologies.length}
           title="LeetCode"
