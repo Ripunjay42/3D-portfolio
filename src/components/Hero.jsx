@@ -68,7 +68,7 @@ const Hero = () => {
                     <img
                       src={dancingGif}
                       alt="Dancing GIF"
-                      className="lg:h-[170px] md:h-[160px] sm:h-[140px]  h-[100px] ml-15  md:ml-24  lg:ml-24 "
+                      className="lg:h-[170px] md:h-[160px] sm:h-[140px]  h-[100px] ml-16  md:ml-24  lg:ml-24 "
                     />
                   )}
                   {(!isPlaying || isMuted) && (
