@@ -213,8 +213,7 @@ const Navbar = () => {
                   {resumeLink.title}
                 </a>
               </li>
-              {/* Add LinkedIn and GitHub icons to the mobile menu */}
-              <li className="flex gap-4 mt-4">
+              {/* <li className="flex gap-4 mt-4">
                 <a
                   href="https://www.linkedin.com/in/ripunjay-choudhury-83864524b/"
                   target="_blank"
@@ -229,7 +228,7 @@ const Navbar = () => {
                 >
                   <img src={githubs} alt="GitHub" className="h-5 w-5" />
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

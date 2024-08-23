@@ -9,7 +9,7 @@ import { fadeIn, textVariant } from '../utils/motion';
 const ProjectCard = ({ index, name, description, tags, image, source_code_link, website_link }) => {
   return (
     <div 
-      className="w-full sm:w-[90%] md:w-[45%] lg:w-[38%] xl:w-[30%]"
+      className="w-full sm:w-[80%] md:w-[45%] lg:w-[38%] xl:w-[30%]"
     >
       <Tilt
         tiltMaxAngleX={12} 
@@ -18,7 +18,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
         transitionSpeed={250} 
         className='bg-tertiary rounded-2xl w-full flex-shrink-0 green-pink-gradient p-[1px] '
       >
-        <div className='bg-tertiary w-full  rounded-2xl p-4 flex flex-col justify-between min-h-[590px] shadow-card'>
+        <div className='bg-tertiary w-full  rounded-2xl p-4 flex flex-col justify-between min-h-[610px] shadow-card'>
           <div>
             <div className='relative w-full rounded-2xl'>
               <img
@@ -70,7 +70,7 @@ const Works = () => {
       <div className='w-full flex'>
         <p
           variants={fadeIn('', '', 0.1, 1)}
-          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
+          className='mt-3 text-secondary lg:text-[17px] md:text-[16px] text-[14px] max-w-3xl leading-[30px]'
         >
           The following projects showcase my&nbsp;skills and&nbsp;experience through real&#8209;world
           examples of&nbsp;my work. Each project is&nbsp;briefly described with&nbsp;links

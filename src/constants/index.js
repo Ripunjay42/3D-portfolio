@@ -257,8 +257,8 @@ const projects = [
   {
     name: "JOBBOX:Full-Stack Job Platform",
     description:
-      `job search platform with Enhanced performance through backend and client-side pagination. 
-      Implemented efficient data prefetching strategy for improved user experience and faster page loads.`,
+      `job search platform with Enhanced performance through client and server pagination, Implemented efficient data prefetching, 
+      Admin panel for manage content, Responsive UI design.`,
     tags: [
       {
         name: "nextjs",
