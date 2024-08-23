@@ -84,7 +84,7 @@ const Navbar = () => {
       }`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-4 items-center">
           <Link
             to="/"
             className="flex items-center gap-4"
@@ -94,9 +94,9 @@ const Navbar = () => {
             }}
           >
             <img src={logo} alt="logo" className="w-10 h-10 object-contain" />
-            <p className="text-white text-xl font-bold cursor-pointer flex tracking-wider">
+            {/* <p className="text-white text-xl font-bold cursor-pointer flex tracking-wider">
               Ripunjay &nbsp;
-            </p>
+            </p> */}
           </Link>
 
           <div className="hidden sm:flex gap-4">
