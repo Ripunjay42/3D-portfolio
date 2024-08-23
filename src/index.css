@@ -266,8 +266,74 @@ textarea {
   100% {
     color: #d82d2d;
   }
+  0%, 100% {
+    transform: rotate(0deg) scale(0.8);
+  }
+  25% {
+    transform: rotate(0deg) scale(1.03);
+  }
+  50% {
+    transform: rotate(0deg) scale(0.8);
+  }
+  75% {
+    transform: rotate(0deg) scale(1.03);
+  }
 }
 
 .animate-bowText {
   animation: bowText 3s linear infinite; /* Adjust duration and timing as needed */
+}
+
+
+/* @keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20%);
+  }
+}
+
+@layer utilities {
+  .animate-jump {
+    animation: jump 0.5s infinite;
+  }
+} */
+
+@keyframes dance {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-10deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(10deg) scale(1.1);
+  }
+  75% {
+    transform: rotate(-5deg) scale(1);
+  }
+}
+
+@layer utilities {
+  .animate-dance {
+    animation: dance 0.8s infinite;
+  }
+}
+
+
+@keyframes move-left-right {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+
+@layer utilities {
+  .animate-move-left-right {
+    animation: move-left-right 0.5s infinite;
+  }
 }

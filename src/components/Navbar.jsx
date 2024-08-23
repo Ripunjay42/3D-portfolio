@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
 import { menu, close, linkedin, githubs, logo } from '../assets';
-import { FaFileAlt, FaVolumeMute, FaVolumeUp, FaPlay} from 'react-icons/fa'; // Import Font Awesome icons
+import { FaFileAlt, FaVolumeMute, FaVolumeUp, FaPlay, FaMusic} from 'react-icons/fa'; // Import Font Awesome icons
 import { AudioContext } from '../AudioContext'; // Import the music file
 
 
@@ -100,21 +100,28 @@ const Navbar = () => {
           </Link>
 
           <div className="flex gap-4">
-            <a
-              href="https://www.linkedin.com/in/ripunjay-choudhury-83864524b/"
-              target="_blank"
-              className="rounded-full border-[1px] border-[#915EFF] p-2 transition-transform duration-300 hover:shadow-violet-700 hover:shadow-md hover:scale-105"
-            >
-              <img src={linkedin} alt="LinkedIn" className="h-5 w-5" />
-            </a>
-            <a
-              href="https://github.com/Ripunjay42"
-              target="_blank"
-              className="rounded-full border-[1px] border-[#915EFF] p-2 transition-transform duration-300 hover:shadow-violet-700 hover:shadow-md hover:scale-105"
-            >
-              <img src={githubs} alt="GitHub" className="h-5 w-5" />
-            </a>
-          </div>
+              <a
+                href="https://www.linkedin.com/in/ripunjay-choudhury-83864524b/"
+                target="_blank"
+                className="group relative rounded-full border-[1px] border-[#915EFF] p-2 transition-transform duration-300 hover:shadow-violet-700 hover:shadow-md hover:scale-105"
+              >
+                <img src={linkedin} alt="LinkedIn" className="h-5 w-5" />
+                <span className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <span className="absolute -right-3 transform rotate-45 border-t-2 border-r-2 border-[#48ccdd] w-2 h-2"></span>
+                </span>
+              </a>
+              <a
+                href="https://github.com/Ripunjay42"
+                target="_blank"
+                className="group relative rounded-full border-[1px] border-[#915EFF] p-2 transition-transform duration-300 hover:shadow-violet-700 hover:shadow-md hover:scale-105"
+              >
+                <img src={githubs} alt="GitHub" className="h-5 w-5" />
+                <span className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <span className="absolute -right-3 transform rotate-45 border-t-2 border-r-2 border-[#4edbe6] w-2 h-2"></span>
+                </span>
+              </a>
+            </div>
+
         </div>
 
         <ul className="list-none hidden xl:flex flex-row gap-12">
@@ -155,6 +162,25 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
+
+        {canAutoplay ? (
+        <button onClick={toggleMute} className={`ml-4 relative rounded-full p-2 transition-all duration-300 ${isMuted ? '' : 'animate-glow'}`}>
+          {isMuted ? (
+            <FaVolumeMute className="w-5 h-5 text-white" />
+        
+          ) : (
+              <FaVolumeUp className="w-5 h-5 text-white animate-dance"/>
+          )}
+        </button>
+      ) : (
+        <button onClick={togglePlay} className="ml-4 cursor-pointer flex gap-2">
+            <span className="animate-bowText text-[18px] font-bold">
+              play
+            </span>
+           <FaMusic className="w-5 h-7 text-white animate-dance" />
+          {/* <FaPlay className="w-5 h-7 text-white animate-dance" />  */}
+        </button>
+      )}
 
         <div className="xl:hidden flex flex-1 justify-end items-center">
           <img
@@ -234,22 +260,24 @@ const Navbar = () => {
         </div>
 
         {/* Mute/Unmute Button */}
-        {canAutoplay ? (
+        {/* {canAutoplay ? (
         <button onClick={toggleMute} className={`ml-4 relative rounded-full p-2 transition-all duration-300 ${isMuted ? '' : 'animate-glow'}`}>
           {isMuted ? (
             <FaVolumeMute className="w-5 h-5 text-white" />
+        
           ) : (
-              <FaVolumeUp className="w-5 h-5 text-white"/>
+              <FaVolumeUp className="w-5 h-5 text-white animate-dance"/>
           )}
         </button>
       ) : (
         <button onClick={togglePlay} className="ml-4 cursor-pointer flex gap-2">
             <span className="animate-bowText text-[18px] font-bold">
-              Play
+              play
             </span>
-          <FaPlay className="w-5 h-7 text-white" /> 
+           <FaMusic className="w-5 h-7 text-white animate-dance" />
+          <FaPlay className="w-5 h-7 text-white animate-dance" /> 
         </button>
-      )}
+      )} */}
     </div>
     </nav>
   );

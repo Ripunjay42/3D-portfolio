@@ -4,6 +4,7 @@ import { Typewriter } from 'react-simple-typewriter';
 import { styles } from '../styles';
 import { ComputersCanvas } from './canvas';
 import wavingImage from '../assets/avatar.png';
+import dancingGif from '../assets/dance.gif';
 import { FaLaptopCode, FaLightbulb, FaTools } from 'react-icons/fa';
 import SpeakerWave from './SpeakerWave';
 import { AudioContext } from '../AudioContext.jsx';
@@ -29,7 +30,7 @@ const Hero = () => {
       >
         <div className="mt-5 flex flex-col items-center justify-center">
           <div className="h-5 w-5 rounded-full bg-[#915EFF]" />
-          <div className="violet-gradient h-40 w-1 sm:h-80" />
+          <div className="violet-gradient h-60 w-1 sm:h-100" />
         </div>
 
         <div className="flex items-center">
@@ -58,9 +59,18 @@ const Hero = () => {
                 alt="Waving Avatar"
                 className="h-20 w-20 sm:h-28 sm:w-28 mt-2" // Adjust `mt-2` to control spacing
               />
-              <div className="relative " style={{ top: '-20px' }}>
+              <div className="relative flex items-center justify-center h-20 md:top-[-20px] sm:top-[-10px] top-[-10px] lg:top-[-20px]">
                 <SpeakerWave isPlaying={isPlaying} isMuted={isMuted} />
               </div>
+              <div className="relative " style={{top:'10px'}}>
+                {isPlaying && !isMuted && (
+                    <img
+                      src={dancingGif}
+                      alt="Dancing GIF"
+                      className="lg:h-[180px] md:h-[160px] sm:h-[140px]  h-[100px] ml-16  md:ml-24  lg:ml-28 "
+                    />
+                  )}
+                </div>
             </div>
           </div>
         </div>
