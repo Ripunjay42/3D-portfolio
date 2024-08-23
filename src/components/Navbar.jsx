@@ -99,7 +99,7 @@ const Navbar = () => {
             </p> */}
           </Link>
 
-          <div className="hidden sm:flex gap-4">
+          <div className="flex gap-4">
             <a
               href="https://www.linkedin.com/in/ripunjay-choudhury-83864524b/"
               target="_blank"
