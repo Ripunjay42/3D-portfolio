@@ -128,15 +128,15 @@ const technologies = [
     icon: css,
   },
   {
-    name: "React JS",
+    name: "ReactJS",
     icon: reactjs,
   },
   {
-    name: "Next JS",
+    name: "NextJS",
     icon: next,
   },
   {
-      name: "Tailwind CSS",
+      name: "Tailwind",
       icon: tailwind,
   },
   {
@@ -153,11 +153,11 @@ const technologies = [
     icon: django,
   },
   {
-    name: "Express JS",
+    name: "Express",
     icon: express,
   },
   {
-    name: "Node JS",
+    name: "NodeJS",
     icon: nodejs,
   },
 
@@ -172,7 +172,7 @@ const technologies = [
   
  
   {
-    name: "Postgresql",
+    name: "PostgreSql",
     icon: postgresql,
   },
   {

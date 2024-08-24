@@ -23,7 +23,7 @@ const ServiceCard = ({ index, title, icon, links }) => {
         <div className="bg-tertiary py-5 px-12 rounded-[20px] min-h-[280px] flex flex-col justify-evenly items-center">
           <img src={icon} alt={title} className="w-36 h-30 object-contain" />
           <a href={links} target="_blank" rel="noopener noreferrer">
-            <h3 className="text-blue-500 text-[17px] underline font-bold text-center flex items-center">
+            <h3 className="text-white-100 text-[17px] underline font-bold text-center flex items-center">
               {title}
               <span>
                 <img src={link} alt="link icon" className="h-3 w-3 ml-3" />
@@ -68,7 +68,7 @@ const Tech = () => {
           {technologies.map((tech) => (
             <div
               key={tech.name}
-              className="relative group w-25 h-25 flex items-center justify-center p-4 rounded-lg transition-transform duration-300 hover:scale-110"
+              className="relative group w-25 h-25 flex items-center justify-center p-4 rounded-lg transition-transform duration-300 hover:scale-105"
               style={{
                 background: 'transparent',
                 backgroundClip: 'padding-box',
@@ -85,8 +85,8 @@ const Tech = () => {
                 }}
               />
               <img src={tech.icon} alt={tech.name} className="w-16 h-16" />
-              <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-y-[-10px] transition-all duration-300 ease-out">
-                <div className="bg-transparent font-extrabold text-[#4dffff] text-center px-3 py-1 rounded-lg shadow-lg italic font-cursive">
+              <div className="absolute bottom-full mb-[-10px] left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-y-[-10px] transition-all duration-300 ease-out">
+                <div className="bg-transparent font-bold text-white-100 text-[15px] text-center px-4 py-1 rounded-lg shadow-lg">
                   {tech.name}
                 </div>
               </div>

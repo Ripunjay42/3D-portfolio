@@ -52,7 +52,7 @@ const Certifications = () => {
         </div>
       {/* </div> */}
 
-      <div className={`${styles.paddingX} mt-12 gap-8 flex items-stretch justify-center flex-wrap`}>
+      <div className={`mt-12 gap-8 flex items-stretch justify-center flex-wrap`}>
         {certifications.map((certification, index) => (
           <Card 
             key={certification.name}
