@@ -63,7 +63,7 @@ const Hero = () => {
               <div className="relative flex items-center justify-center h-20 md:top-[-22px] sm:top-[-14px] top-[-14px] lg:top-[-24px]">
                 <SpeakerWave isPlaying={isPlaying} isMuted={isMuted} />
               </div>
-              <div className="relative " style={{top:'10px'}}>
+              <div className="relative " style={{top:'4px'}}>
                 {isPlaying && !isMuted && (
                     <img
                       src={dancingGif}
