@@ -34,9 +34,9 @@ const SpeakerWave = ({ isPlaying, isMuted }) => {
 
   const getSizeForScreen = (baseSize, index) => {
     if (windowWidth >= 768) {
-      return baseSize + index * 17;
+      return baseSize + index * 15;
     } else if (windowWidth >= 640) {
-      return baseSize + index * 13;
+      return baseSize + index * 12;
     } else {
       return baseSize + index * 9;
     }
