@@ -58,7 +58,7 @@ const Hero = () => {
               <img
                 src={wavingImage}
                 alt="Waving Avatar"
-                className="h-[100px] w-20 md:h-[150px] md:w-24 lg:h-[160px] lg:w-28  mt-2" // Adjust `mt-2` to control spacing
+                className="h-[100px] w-20 md:h-[150px] md:w-24 lg:h-[160px] lg:w-28 top-[10px] mt-2" // Adjust `mt-2` to control spacing
               />
               <div className="relative flex items-center justify-center h-20 md:top-[-22px] sm:top-[-14px] top-[-14px] lg:top-[-24px]">
                 <SpeakerWave isPlaying={isPlaying} isMuted={isMuted} />
