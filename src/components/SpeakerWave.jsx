@@ -1,64 +1,65 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const SpeakerWave = ({ isPlaying, isMuted }) => {
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 768);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const waveVariants = {
-    playing: {
-      opacity: [0.5, 1, 0.5],
-      scale: [0.8, 1.2, 0.8],
-      borderColor: [
-        'rgba(255, 0, 0, 1)',
-        'rgba(0, 255, 0, 1)',
-        'rgba(0, 0, 255, 1)',
-      ],
-      boxShadow: [
-        '0 0 20px rgba(255, 0, 0, 0.8)',
-        '0 0 20px rgba(0, 255, 0, 0.8)',
-        '0 0 20px rgba(0, 0, 255, 0.8)',
-      ],
+    playing: (index) => ({
+      scale: [1, 1.5, 1],
+      opacity: [0.3, 0.7, 0.3],
       transition: {
         repeat: Infinity,
-        repeatType: 'loop',
-        duration: 1.5,
+        repeatType: 'reverse',
+        duration: 1.5 + index * 0.2,
         ease: 'easeInOut',
       },
-    },
+    }),
     paused: {
-      opacity: 0.5,
-      scale: 0.8,
-      borderColor: 'rgba(145, 94, 255, 1)',
-      boxShadow: '0 0 10px rgba(145, 94, 255, 0.5)',
+      scale: 1,
+      opacity: 0.3,
     },
   };
 
-  // Function to determine sizes based on screen width
+  const getColor = (index) => {
+    const hue = (index * 60) % 360;
+    return `hsl(${hue}, 80%, 50%)`;
+  };
+
   const getSizeForScreen = (baseSize, index) => {
-    if (window.innerWidth >= 768) { // md and above
-      return `${baseSize + index * 20}px`;
-    } else if (window.innerWidth >= 640) { // sm screens
-      return `${baseSize + index * 15}px`;
-    } else { // xs and below
-      return `${baseSize + index * 10}px`;
+    if (windowWidth >= 768) {
+      return baseSize + index * 17;
+    } else if (windowWidth >= 640) {
+      return baseSize + index * 13;
+    } else {
+      return baseSize + index * 9;
     }
   };
 
   return (
-    <div className="relative flex items-center justify-center h-20">
+    <div className="relative flex items-center justify-center h-40">
       {[...Array(5)].map((_, index) => (
         <motion.div
           key={index}
           className="absolute rounded-full"
+          custom={index}
           variants={waveVariants}
           animate={isPlaying && !isMuted ? 'playing' : 'paused'}
           style={{
-            width: getSizeForScreen(20, index),
-            height: getSizeForScreen(20, index),
-            borderRadius: '50%',
+            width: `${getSizeForScreen(20, index)}px`,
+            height: `${getSizeForScreen(20, index)}px`,
+            border: `2px solid ${getColor(index)}`,
+            boxShadow: `0 0 10px ${getColor(index)}`,
             position: 'absolute',
             top: '50%',
             left: '50%',
-            transform: `translate(-50%, -50%)`,
-            border: '1px solid',
+            transform: 'translate(-50%, -50%)',
           }}
         />
       ))}

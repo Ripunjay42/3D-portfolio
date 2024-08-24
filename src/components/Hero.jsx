@@ -54,28 +54,28 @@ const Hero = () => {
                 />
               </p>
             </div>
-            <div className="flex items-center gap-3 md:ml-4">
+            <div className="flex items-center gap-6 md:ml-4">
               <img
                 src={wavingImage}
                 alt="Waving Avatar"
-                className="h-20 w-20 sm:h-28 sm:w-28 mt-2" // Adjust `mt-2` to control spacing
+                className="h-[100px] w-20 md:h-[150px] md:w-24 lg:h-[160px] lg:w-28  mt-2" // Adjust `mt-2` to control spacing
               />
               <div className="relative flex items-center justify-center h-20 md:top-[-22px] sm:top-[-14px] top-[-14px] lg:top-[-24px]">
                 <SpeakerWave isPlaying={isPlaying} isMuted={isMuted} />
               </div>
-              <div className="relative " style={{top:'10px'}}>
+              <div className="relative " style={{top:'18px'}}>
                 {isPlaying && !isMuted && (
                     <img
                       src={dancingGif}
                       alt="Dancing GIF"
-                      className="lg:h-[170px] md:h-[160px] sm:h-[140px]  h-[100px] ml-16  md:ml-24  lg:ml-24 "
+                      className="lg:h-[170px] md:h-[160px] sm:h-[140px]  h-[100px] ml-16  md:ml-20  lg:ml-24 "
                     />
                   )}
                   {(!isPlaying || isMuted) && (
                     <img
                       src={dancingPng}
                       alt="Dancing png"
-                      className="lg:h-[170px] md:h-[160px] sm:h-[140px]  h-[100px] ml-16  md:ml-24  lg:ml-24 "
+                      className="lg:h-[170px] md:h-[160px] sm:h-[140px]  h-[100px] ml-16  md:ml-20  lg:ml-24 "
                     />
                   )}
                 </div>
