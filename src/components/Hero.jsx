@@ -63,19 +63,19 @@ const Hero = () => {
               <div className="relative flex items-center justify-center h-20 md:top-[-22px] sm:top-[-14px] top-[-14px] lg:top-[-24px]">
                 <SpeakerWave isPlaying={isPlaying} isMuted={isMuted} />
               </div>
-              <div className="relative " style={{top:'18px'}}>
+              <div className="relative " style={{top:'14px'}}>
                 {isPlaying && !isMuted && (
                     <img
                       src={dancingGif}
                       alt="Dancing GIF"
-                      className="lg:h-[170px] md:h-[160px] sm:h-[140px]  h-[100px] ml-16  md:ml-20  lg:ml-24 "
+                      className="lg:h-[170px] md:h-[160px] sm:h-[140px]  h-[100px] ml-16  md:ml-20  lg:ml-[88px] "
                     />
                   )}
                   {(!isPlaying || isMuted) && (
                     <img
                       src={dancingPng}
                       alt="Dancing png"
-                      className="lg:h-[170px] md:h-[160px] sm:h-[140px]  h-[100px] ml-16  md:ml-20  lg:ml-24 "
+                      className="lg:h-[170px] md:h-[160px] sm:h-[140px]  h-[100px] ml-16  md:ml-20  lg:ml-[88px] "
                     />
                   )}
                 </div>
