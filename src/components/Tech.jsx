@@ -17,9 +17,9 @@ const ServiceCard = ({ index, title, icon, links }) => {
       tiltMaxAngleY={15}
       scale={1}
       transitionSpeed={250}
-      className="w-[210px] xs:w-[200px]"
+      className="w-[165px] lg:w-[200px] md:w[190px]"
     >
-      <div className="w-[210px] xs:w-[200px] green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+      <div className="green-pink-gradient p-[1px] rounded-[20px] shadow-card">
         <div className="bg-tertiary py-5 px-12 rounded-[20px] min-h-[280px] flex flex-col justify-evenly items-center">
           <img src={icon} alt={title} className="w-36 h-30 object-contain" />
           <a href={links} target="_blank" rel="noopener noreferrer">

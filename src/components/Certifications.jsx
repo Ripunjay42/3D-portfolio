@@ -11,7 +11,7 @@ const Card = ({ index, name, image, icon, url }) => {
   return (
     <div 
       variants={fadeIn("", "spring", index * 0.5, 0.75)}
-      className="xs:w-[90%] sm:w-[90%] md:w-[45%] lg:w-[38%] xl:w-[30%]"
+      className="w-[300px] md:w-[300px] lg:w-[300px]"
     >
       <Tilt
         options={{

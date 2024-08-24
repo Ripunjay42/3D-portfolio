@@ -9,7 +9,7 @@ import { fadeIn, textVariant } from '../utils/motion';
 const ProjectCard = ({ index, name, description, tags, image, source_code_link, website_link }) => {
   return (
     <div 
-      className="w-full sm:w-[80%] md:w-[45%] lg:w-[38%] xl:w-[30%]"
+      className="w-[320px] md:w-[295px] lg:w-[350px]"
     >
       <Tilt
         tiltMaxAngleX={12} 
