@@ -71,7 +71,7 @@ const Navbar = () => {
               window.scrollTo(0, 0);
             }}
           >
-            <img src={logo} alt="logo" className="w-10 h-10 object-contain" />
+            <img src={logo} alt="logo" className="w-10 h-10 object-contain pointer-events-none" />
             {/* <p className="text-white text-xl font-bold cursor-pointer flex tracking-wider">
               Ripunjay &nbsp;
             </p> */}

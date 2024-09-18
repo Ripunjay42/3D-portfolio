@@ -24,7 +24,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
               <img
                 src={image}
                 alt={name}
-                className='w-full h-[210px] rounded-[10px] object-cover border-[1px] border-secondary'
+                className='w-full h-[210px] rounded-[10px] object-cover border-[1px] border-secondary pointer-events-none'
               />
             </div>
             <div className='mt-5'>
@@ -44,12 +44,12 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
             <div onClick={() => window.open(website_link, '_blank')}
               className='black-gradient w-9 h-9 rounded-full border-[1px] border-secondary flex items-center justify-center cursor-pointer mr-2'
             >
-              <img src={gotosite} alt="Go to site" className='w-4/5 h-4/5 object-contain' />
+              <img src={gotosite} alt="Go to site" className='w-4/5 h-4/5 object-contain pointer-events-none' />
             </div>
             <div onClick={() => window.open(source_code_link, '_blank')}
               className='black-gradient w-9 h-9 rounded-full border-[1px] border-secondary flex items-center justify-center cursor-pointer '
             >
-              <img src={github} alt="GitHub" className='w-4/5 h-4/5 object-contain' />
+              <img src={github} alt="GitHub" className='w-4/5 h-4/5 object-contain pointer-events-none' />
             </div>
           </div>
         </div>

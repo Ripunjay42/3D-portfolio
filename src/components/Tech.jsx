@@ -21,12 +21,12 @@ const ServiceCard = ({ index, title, icon, links }) => {
     >
       <div className="green-pink-gradient p-[1px] rounded-[20px] shadow-card">
         <div className="bg-tertiary py-5 px-12 rounded-[20px] min-h-[280px] flex flex-col justify-evenly items-center">
-          <img src={icon} alt={title} className="w-36 h-30 object-contain" />
+          <img src={icon} alt={title} className="w-36 h-30 object-contain pointer-events-none" />
           <a href={links} target="_blank" rel="noopener noreferrer">
             <h3 className="text-white-100 text-[17px] underline font-bold text-center flex items-center">
               {title}
               <span>
-                <img src={link} alt="link icon" className="h-3 w-3 ml-3" />
+                <img src={link} alt="link icon" className="h-3 w-3 ml-3 pointer-events-none" />
               </span>
             </h3>
           </a>
@@ -84,7 +84,7 @@ const Tech = () => {
                   margin: '-2px',
                 }}
               />
-              <img src={tech.icon} alt={tech.name} className="w-16 h-16" />
+              <img src={tech.icon} alt={tech.name} className="w-16 h-16 pointer-events-none" />
               <div className="absolute bottom-full mb-[-10px] left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-y-[-10px] transition-all duration-300 ease-out">
                 <div className="bg-transparent font-bold text-white-100 text-[15px] text-center px-4 py-1 rounded-lg shadow-lg">
                   {tech.name}

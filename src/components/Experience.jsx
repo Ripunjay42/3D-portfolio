@@ -15,7 +15,7 @@ const ExperienceCard = ({ experience }) => (
     iconStyle={{ background: experience.iconBg }}
     icon={
         <img src={experience.icon} 
-        alt={experience.company_name} />
+        alt={experience.company_name} className='pointer-events-none' />
     }
   >
   <div>

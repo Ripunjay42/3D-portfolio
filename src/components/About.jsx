@@ -23,7 +23,7 @@ const ServiceCard = ({ index, title, icon }) => {
           speed: 250
         }}
         className="bg-tertiary py-5 px-12 rounded-[20px] min-h-[280px] flex flex-col justify-evenly items-center">
-          <img src={icon} alt={title} className="w-36 h-30 object-contain"/>
+          <img src={icon} alt={title} className="w-36 h-30 object-contain pointer-events-none"/>
           <h3 className="text-white text-[17px] font-bold text-center">
             {title}
           </h3>

@@ -124,14 +124,14 @@ const Contact = () => {
               target="_blank"
               className="rounded-full border-[1px] border-[#915EFF] p-2 transition-transform duration-300 hover:shadow-violet-700 hover:shadow-md hover:scale-105"
             >
-              <img src={linkedin} alt="LinkedIn" className="h-5 w-5" />
+              <img src={linkedin} alt="LinkedIn" className="h-5 w-5 pointer-events-none" />
             </a>
             <a
               href="https://github.com/Ripunjay42"
               target="_blank"
               className="rounded-full border-[1px] border-[#915EFF] p-2 transition-transform duration-300 hover:shadow-violet-700 hover:shadow-md hover:scale-105"
             >
-              <img src={githubs} alt="GitHub" className="h-5 w-5" />
+              <img src={githubs} alt="GitHub" className="h-5 w-5 pointer-events-none" />
             </a>
           </div>
 
