@@ -21,9 +21,8 @@ const ServiceCard = ({ index, title, icon, links }) => {
     >
       <div className="green-pink-gradient p-[1px] rounded-[20px] shadow-card">
         <div className="bg-tertiary py-5 px-12 rounded-[20px] min-h-[200px] h-[200px]  md:h-[230px] lg:h-[250px] flex flex-col justify-evenly items-center">
-          {/* <img src={icon} alt={title} className="w-36 h-30   object-contain pointer-events-none" /> */}
+          <img src={icon} alt={title} className="w-36 h-30   object-contain pointer-events-none" />
           <a href={links} target="_blank" rel="noopener noreferrer">
-            <img src={icon} alt={title} className="w-36 h-30   object-contain pointer-events-none mb-3" />
             <h3 className="text-white-100 text-[15px] md:text-[17px] underline font-bold text-center flex items-center">
               {title}
               <span>
