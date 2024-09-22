@@ -17,13 +17,14 @@ const ServiceCard = ({ index, title, icon, links }) => {
       tiltMaxAngleY={15}
       scale={1}
       transitionSpeed={250}
-      className="w-[165px] lg:w-[200px] md:w[190px]"
+      className="w-[140px] md:w-[180px] lg:w-[190px] "
     >
       <div className="green-pink-gradient p-[1px] rounded-[20px] shadow-card">
-        <div className="bg-tertiary py-5 px-12 rounded-[20px] min-h-[280px] flex flex-col justify-evenly items-center">
-          <img src={icon} alt={title} className="w-36 h-30 object-contain pointer-events-none" />
+        <div className="bg-tertiary py-5 px-12 rounded-[20px] min-h-[200px] h-[200px]  md:h-[230px] lg:h-[250px] flex flex-col justify-evenly items-center">
+          {/* <img src={icon} alt={title} className="w-36 h-30   object-contain pointer-events-none" /> */}
           <a href={links} target="_blank" rel="noopener noreferrer">
-            <h3 className="text-white-100 text-[17px] underline font-bold text-center flex items-center">
+            <img src={icon} alt={title} className="w-36 h-30   object-contain pointer-events-none mb-3" />
+            <h3 className="text-white-100 text-[15px] md:text-[17px] underline font-bold text-center flex items-center">
               {title}
               <span>
                 <img src={link} alt="link icon" className="h-3 w-3 ml-3 pointer-events-none" />
