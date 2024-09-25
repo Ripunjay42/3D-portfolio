@@ -11,7 +11,7 @@ const App = () => {
           <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
             <Navbar />
               <div className="relative z-0">
-                 <div class="absolute inset-0 z-[-2] bg-black opacity-80"></div> 
+                 <div class="absolute inset-0 z-[-2] bg-black opacity-75"></div> 
                  <Hero />
                  <StarsCanvas />
             </div>
