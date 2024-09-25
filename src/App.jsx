@@ -8,10 +8,10 @@ const App = () => {
     <AudioProvider>
       <BrowserRouter>
         <div className="bg-primary relative z-0">
-          <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
+          <div className="bg-hero-patter bg-cover bg-center bg-no-repeat">
             <Navbar />
               <div className="relative z-0">
-                 <div class="absolute inset-0 z-[-2] bg-black opacity-75"></div> 
+                 <div class="absolute inset-0 z-[-2] bg-black opacity-80"></div> 
                  <Hero />
                  <StarsCanvas />
             </div>
