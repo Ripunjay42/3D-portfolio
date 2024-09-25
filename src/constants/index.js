@@ -257,8 +257,8 @@ const projects = [
   {
     name: "Daily Code:Remote Code Execution",
     description:
-      `Remote Code Execution allows user to access a variety of coding problems and submit solutions in different programming languages 
-       and checked solutions against predefined test cases.`,
+      `Remote Code Execution allows user to access a variety of coding problems and submit solutions and check output against predefined test cases 
+      and can use different programming languages to practice.`,
     tags: [
       {
         name: "nextjs",
@@ -274,7 +274,7 @@ const projects = [
       },
       {
         name: "Judge0",
-        color: "yellow-text-gradient",
+        color: "blue-text-gradient",
       },
     ],
     image: rce,
@@ -282,7 +282,7 @@ const projects = [
     website_link: 'https://daily-code-pi.vercel.app',
   },  
   {
-    name: "JOBBOX:Full-Stack Job Platform",
+    name: "Job BOX:Job Searching Platform",
     description:
       `job search platform with Enhanced performance through client and server pagination, Implemented efficient data prefetching, 
       Admin panel for manage content, Responsive UI design.`,
@@ -301,7 +301,7 @@ const projects = [
       },
       {
         name: "postgresql",
-        color: "yellow-text-gradient",
+        color: "green-text-gradient",
       },
     ],
     image: jobbox,
