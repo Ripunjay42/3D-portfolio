@@ -4,13 +4,13 @@ import {
   devops,
   comp,
 
-
+  rce,
   jobbox,
   tictac,
   alumni,
   facemask,
   rain,
-  portfolio,
+  // portfolio,
 
   c,
   cpp,
@@ -255,6 +255,33 @@ const certifications = [
 
 const projects = [
   {
+    name: "Daily Code:Remote Code Execution",
+    description:
+      `Remote Code Execution allows user to access a variety of coding problems and submit solutions in different programming languages 
+       and checked solutions against predefined test cases.`,
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      }, 
+      {
+        name: "Firebase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Judge0",
+        color: "yellow-text-gradient",
+      },
+    ],
+    image: rce,
+    source_code_link: "https://github.com/Ripunjay42/remote-code-execution.git",
+    website_link: 'https://daily-code-pi.vercel.app',
+  },  
+  {
     name: "JOBBOX:Full-Stack Job Platform",
     description:
       `job search platform with Enhanced performance through client and server pagination, Implemented efficient data prefetching, 
@@ -385,28 +412,28 @@ const projects = [
     source_code_link: "https://github.com/Ripunjay42/Rainfall-prediction",
     website_link: "https://rainfall-prediction8.onrender.com/",  
   },
-  {
-    name: "Personal portfolio",
-    description:
-      "Developed and Designed a portfolio website as a self learning project, as learning one subject or skill at a time is always the best option.",
-    tags: [
-      {
-        name: "html",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "javascript",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: portfolio,
-    source_code_link: "https://ripunjay-choudhury.vercel.app/",
-    website_link: "https://ripunjay-choudhury.vercel.app/",  
-  },
+  // {
+  //   name: "Personal portfolio",
+  //   description:
+  //     "Developed and Designed a portfolio website as a self learning project, as learning one subject or skill at a time is always the best option.",
+  //   tags: [
+  //     {
+  //       name: "html",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "javascript",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "css",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: portfolio,
+  //   source_code_link: "https://ripunjay-choudhury.vercel.app/",
+  //   website_link: "https://ripunjay-choudhury.vercel.app/",  
+  // },
 ];
 
 export { services, technologies, experiences, certifications, projects };

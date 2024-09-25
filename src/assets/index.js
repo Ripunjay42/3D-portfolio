@@ -16,6 +16,7 @@ import devops from "./ser/devops.png";
 import comp from "./ser/comp.png";
 
 
+import rce from './works/rce.gif'
 import  jobbox from './works/jobbox.gif'
 import tictac from './works/tictac.gif'
 import alumni from './works/alumni.gif'
@@ -76,6 +77,7 @@ export {
   comp,
 
 
+  rce,
   jobbox,
   tictac,
   alumni,
