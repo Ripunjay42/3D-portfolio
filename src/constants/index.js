@@ -258,7 +258,7 @@ const projects = [
     name: "Daily Code:Remote Code Execution",
     description:
       `Remote Code Execution allows user to access a variety of coding problems and submit solutions and check output against predefined test cases 
-      and also can analyze complexity using Gemeni.`,
+      and also can analyze complexity using Gemini.`,
     tags: [
       {
         name: "nextjs",
@@ -269,7 +269,7 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "Gemeni",
+        name: "Gemini",
         color: "pink-text-gradient",
       },
       {
