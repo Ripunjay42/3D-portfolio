@@ -171,7 +171,7 @@ const Navbar = () => {
           <div
             className={`${
               toggle ? 'translate-x-0' : 'translate-x-full'
-            } px-8 py-10 bg-black border-[1px] border-green-400 absolute top-20 right-0 min-w-[140px] z-10 rounded-xl transition-transform duration-300 transform-gpu`}
+            } px-8 py-10 bg-black border-[0.1px] border-violet-600 absolute top-[72px] left-0 min-w-[140px] z-10 rounded-xs transition-transform duration-300 transform-gpu`}
             style={{
               transform: toggle ? 'translateX(0)' : 'translateX(100%)',
               right: toggle ? '0' : '-100%',
@@ -217,22 +217,6 @@ const Navbar = () => {
                   {resumeLink.title}
                 </a>
               </li>
-              {/* <li className="flex gap-4 mt-4">
-                <a
-                  href="https://www.linkedin.com/in/ripunjay-choudhury-83864524b/"
-                  target="_blank"
-                  className="rounded-full border-[1px] border-[#915EFF] p-2 transition-transform duration-300 hover:shadow-violet-700 hover:shadow-md hover:scale-105"
-                >
-                  <img src={linkedin} alt="LinkedIn" className="h-5 w-5" />
-                </a>
-                <a
-                  href="https://github.com/Ripunjay42"
-                  target="_blank"
-                  className="rounded-full border-[1px] border-[#915EFF] p-2 transition-transform duration-300 hover:shadow-violet-700 hover:shadow-md hover:scale-105"
-                >
-                  <img src={githubs} alt="GitHub" className="h-5 w-5" />
-                </a>
-              </li> */}
             </ul>
           </div>
         </div>
