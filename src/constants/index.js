@@ -4,6 +4,7 @@ import {
   devops,
   comp,
 
+  ridewise,
   rce,
   jobbox,
   tictac,
@@ -254,6 +255,33 @@ const certifications = [
 ];
 
 const projects = [
+  {
+    name: "RIDEWISE:Ride Booking System",
+    description:
+      `Designed an automated ride-matching system with driver rating prioritization, that pairs passenger requests with available
+      driver schedules in real-time.`,
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      }, 
+      {
+        name: "Expressjs",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "mapbox",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "postgreSql",
+        color: "green-text-gradient",
+      },
+    ],
+    image: ridewise,
+    source_code_link: "https://github.com/Ripunjay42/Ride_wise.git",
+    website_link: 'https://ride-wise-bay.vercel.app',
+  },  
   {
     name: "Daily Code:Remote Code Execution",
     description:
