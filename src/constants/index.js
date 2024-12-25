@@ -98,7 +98,7 @@ const services = [
     icon: devops,
   },
   {
-    title: "SDE",
+    title: "DSA",
     icon: comp,
   },
 ];
