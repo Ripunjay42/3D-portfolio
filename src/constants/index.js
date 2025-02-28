@@ -197,7 +197,7 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Intern — CDAC",
+    title: "Project Intern (Full Stack Development)",
     company_name: "CDAC, Bangalore",
     icon: cdac,
     iconBg: "#013247",
