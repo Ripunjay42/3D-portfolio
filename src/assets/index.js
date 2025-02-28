@@ -57,6 +57,7 @@ import cer from './cert/cer.png'
 
 
 import gdsc from './exp/gdsc.png'
+import cdac from './exp/cdac.png'
 
 
 export {
@@ -117,5 +118,6 @@ export {
   cer,
 
   gdsc,
+  cdac,
 
 };

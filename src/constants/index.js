@@ -44,6 +44,7 @@ import {
   cer,
 
   gdsc,
+  cdac,
 
 } from "../assets";
 
@@ -195,6 +196,20 @@ const technologies = [
 ];
 
 const experiences = [
+  {
+    title: "Intern — CDAC",
+    company_name: "CDAC, Bangalore",
+    icon: cdac,
+    iconBg: "#013247",
+    date: "Jan 2025 - June 2025",
+    points: [
+      "Created a drag-and-drop form builder using React, enabling 50+ customizable web forms with real-time preview.",
+      "Implemented Zustand for state management, managing 100+ form elements, multi-page forms, and data persistence.",
+      "Structured reusable UI components with Tailwind CSS and Shadcn UI, ensuring 100% cross-browser compatibility.",
+      "Integrated a drag-and-drop interface using DND Kit, supporting seamless element placement, reordering, and nesting.",
+      "Optimized real-time validation, grid-based alignment, and a theming system for enhanced user experience.",
+    ],
+  },
   {
     title: "Core Development Member",
     company_name: "GDSC Tezpur University",
