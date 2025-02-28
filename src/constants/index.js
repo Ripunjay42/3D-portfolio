@@ -48,7 +48,7 @@ import {
 
 } from "../assets";
 
-import { FaUser, FaProjectDiagram, FaLaptopCode, FaEnvelope } from 'react-icons/fa';
+import { FaUser, FaNetworkWired, FaProjectDiagram, FaLaptopCode, FaEnvelope } from 'react-icons/fa';
 
 
 
@@ -67,6 +67,11 @@ export const navLinks = [
     id: "about",
     title: "About",
     icon: FaUser,
+  },
+  {
+    id: "exp",
+    title: "Experience",
+    icon: FaNetworkWired,
   },
   {
     id: "work",
