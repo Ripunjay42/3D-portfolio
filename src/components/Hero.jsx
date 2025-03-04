@@ -54,31 +54,26 @@ const Hero = () => {
                 />
               </p>
             </div>
-            <div className="flex items-center gap-3 md:ml-4">
-              <img
-                src={wavingImage}
-                alt="Waving Avatar"
-                className="h-[110px] w-20 md:h-[140px] md:w-24 lg:h-[150px] lg:w-28  mt-2" // Adjust `mt-2` to control spacing
-              />
-              <div className="relative flex items-center justify-center h-20 md:top-[-22px] sm:top-[-14px] top-[-14px] lg:top-[-24px]">
-                <SpeakerWave isPlaying={isPlaying} isMuted={isMuted} />
-              </div>
-              <div className="relative " style={{top:'6px'}}>
-                {isPlaying && !isMuted && (
-                    <img
-                      src={dancingGif}
-                      alt="Dancing GIF"
-                      className="lg:h-[150px] md:h-[140px] sm:h-[140px]  h-[110px] ml-14  md:ml-[84px]   lg:ml-[88px] "
-                    />
-                  )}
-                  {(!isPlaying || isMuted) && (
-                    <img
-                      src={dancingPng}
-                      alt="Dancing png"
-                      className="lg:h-[150px] md:h-[140px] sm:h-[140px]  h-[110px] ml-14  md:ml-[84px]  lg:ml-[88px] "
-                    />
-                  )}
+            <div className="flex items-center gap-3 lg:ml-4 md:ml-[-6px] xs:ml-[-10px] xxs:ml-[-10px]">
+              <div className="relative" style={{top:'12px'}}>
+                <div className="absolute inset-0 -left-16 -top-16 z-10">
+                  <SpeakerWave isPlaying={isPlaying} isMuted={isMuted} />
                 </div>
+                {isPlaying && !isMuted && (
+                  <img
+                    src={dancingGif}
+                    alt="Dancing GIF"
+                    className="lg:h-[140px] md:h-[130px] sm:h-[130px] h-[110px] ml-0 md:ml-[0px] lg:ml-[0px]"
+                  />
+                )}
+                {(!isPlaying || isMuted) && (
+                  <img
+                    src={dancingPng}
+                    alt="Dancing png"
+                    className="lg:h-[140px] md:h-[130px] sm:h-[130px] h-[110px] ml-0 md:ml-[0px] lg:ml-[0px]"
+                  />
+                )}
+              </div>
             </div>
           </div>
         </div>

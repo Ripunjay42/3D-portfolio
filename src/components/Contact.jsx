@@ -6,6 +6,7 @@ import { styles } from '../styles';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 import { linkedin, githubs } from '../assets';
+import wavingImage from '../assets/avatar.png';
 
 const Contact = () => {
   const formRef = useRef();
@@ -65,11 +66,18 @@ const Contact = () => {
     <div className='xl:mt-12 xl:flex-row flex flex-col-reverse gap-10 overflow-hidden '>
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
-        className="flex-[0.75] bg-black-100 p-8 rounded-2xl max-w-[520px] border-[1px] border-green-400 shadow-card"
+        className="flex-[0.75] bg-black-100 p-8 rounded-2xl max-w-[520px] border-[1px] border-purple-400 shadow-card"
       >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
-
+        <div className="flex items-center gap-3 md:ml-4">
+        <div className="flex flex-col">
+            <p className={styles.sectionSubText}>Get in touch</p>
+            <h3 className={styles.sectionHeadText}>Contact.</h3>
+        </div>
+            <img src={wavingImage} alt="Waving Avatar"
+                        className="h-[70px] w-14 sm:h-[75px] sm:w-16 md:h-[86px] md:w-20 lg:h-[87px] lg:w-20 mt-[-20px]" // Adjust `mt-2` to control spacing
+                      />
+        </div>
+                    
         <form
           ref={formRef}
           onSubmit={handleSubmit}
