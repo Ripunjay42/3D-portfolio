@@ -52,15 +52,17 @@ import { FaUser, FaNetworkWired, FaProjectDiagram, FaLaptopCode, FaEnvelope } fr
 
 
 
-export const about = "I am a tech enthusiast and problem solver with a passion for programming and design.\n"+
-                      "I love to create and build things that are meaningful and impactful.\n\n"+
+export const about = `I am a tech enthusiast and problem solver with a passion for programming and design.
+                     I love to create and build things that are meaningful and impactful.
 
-                      "I was born and raised in Assam.\n"+
-                      "I have completed my graduation in B.sc(Hons)CBCS Computer Science from L.C.B College(Guwahati)\n"+
-                      "and I am currently pursuing Master of Computer Applications(MCA) at Tezpur University.\n\n"+
-                      
-                      "I started my journey of programming by learning C++ as a language which created my interest in Problem Solving.\n"+
-                      "Currently I am trying competitive programming and solving problems on LeetCode.."
+                      I was born and raised in Assam.
+                      I have completed my graduation in B.sc(Hons)CBCS Computer Science from L.C.B College(Guwahati)
+                      and I am currently pursuing Master of Computer Applications(MCA) at Tezpur University.
+
+                      My programming journey began with C++, which sparked my interest in problem-solving and competitive programming. 
+                      Over time, I expanded my expertise to full-stack development, working with React, Next.js, Express.js, PostgreSQL,
+                      among other technologies. I actively solve problems on LeetCode, continuously refining my skills in algorithms, 
+                      and scalable application development..`;
 
 export const navLinks = [
   {
