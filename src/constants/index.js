@@ -217,8 +217,8 @@ const experiences = [
       "Created a drag-and-drop form builder using React, enabling 50+ customizable web forms with real-time preview.",
       "Implemented Zustand for state management, managing 100+ form elements, multi-page forms, and data persistence.",
       "Integrated a drag-and-drop interface using DND Kit, supporting seamless element placement, reordering, and nesting.",
-      "Optimized real-time validation, grid-based alignment, and a theming system for enhanced user experience.",
-      "Enabled localStorage-based form persistence, allowing users to save and reload designs across sessions.",
+      // "Optimized real-time validation, grid-based alignment, and a theming system for enhanced user experience.",
+      // "Enabled localStorage-based form persistence, allowing users to save and reload designs across sessions.",
       "Incorporated form validation, API integration capabilities, and custom request handling."
     ],
   },
