@@ -27,24 +27,32 @@ import portfolio from './works/portfolio.gif'
 import c from './tech/c.png';
 import cpp from './tech/cpp.png';
 import javascript from './tech/javascript.png';
+import java from './tech/java.png';
 import python from './tech/python.png';
 import html from './tech/html.png';
 import css from "./tech/css.png";
 import reactjs from "./tech/reactjs.png";
 import next from "./tech/next.png";
+import redux from "./tech/redux.png";
+import zustand from "./tech/zustand.png";
 import tailwind from "./tech/tailwind.png";
 import bootstrap from "./tech/bootstrap.png";
 import  flask from "./tech/flask.png";
 import django from "./tech/django.png";
 import express from "./tech/express.png";
 import nodejs from "./tech/nodejs.png";
+import spring_boot from "./tech/spring_boot.png";
 import mysql from "./tech/mysql.png";
 import postgresql from "./tech/postgresql.png";
 import sqlite from "./tech/sqlite.png";
+import mongodb from "./tech/mongo.png";
 import linux from "./tech/linux.png";
 import bash from "./tech/bash.png";
 import git from "./tech/git.png";
 import docker from "./tech/docker.png";
+import postman from "./tech/postman.png";
+import firebase from "./tech/firebase.png";
+import aws from "./tech/aws.png";
 
 
 import gcp from './cert/gcp_cer.png'
@@ -89,24 +97,32 @@ export {
   c,
   cpp,
   javascript,
+  java,
   python,
   html,
   css,
   reactjs,
   next,
+  redux,
+  zustand,
   tailwind,
   bootstrap,
   flask,
   django,
   express,
   nodejs,
+  spring_boot,
   mysql,
   postgresql,
   sqlite,
+  mongodb,
   linux,
   bash,
   git,
   docker,
+  postman,
+  firebase,
+  aws,
 
 
   gcp,

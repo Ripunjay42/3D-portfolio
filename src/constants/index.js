@@ -16,24 +16,32 @@ import {
   c,
   cpp,
   javascript,
+  java,
   python,
   html,
   css,
   reactjs,
   next,
+  redux,
+  zustand,
   tailwind,
   bootstrap,
   flask,
   django,
   express,
   nodejs,
+  spring_boot,
   mysql,
   postgresql,
   sqlite,
+  mongodb,  
   linux,
   bash,
   git,
   docker,
+  postman,
+  firebase,
+  aws,
 
   gcp,
   dsa,
@@ -125,6 +133,10 @@ const technologies = [
     icon: javascript,
   },
   {
+    name: "Java",
+    icon: java,
+  },
+  {
     name: "Python",
     icon: python,
   },
@@ -143,6 +155,14 @@ const technologies = [
   {
     name: "NextJS",
     icon: next,
+  },
+  {
+    name: "Redux",
+    icon: redux,
+  },
+  {
+    name: "Zustand",
+    icon: zustand,
   },
   {
       name: "Tailwind",
@@ -169,7 +189,10 @@ const technologies = [
     name: "NodeJS",
     icon: nodejs,
   },
-
+  {
+      name: "Spring Boot",
+      icon: spring_boot,
+  },
   {
     name: "Mysql",
     icon: mysql,
@@ -183,6 +206,10 @@ const technologies = [
   {
     name: "PostgreSql",
     icon: postgresql,
+  },
+  {
+    name: "MongoDB",
+    icon: mongodb,
   },
   {
     name: "Linux",
@@ -200,6 +227,18 @@ const technologies = [
     name: "Docker",
     icon: docker,
   },
+  {
+    name: "Postman",
+    icon: postman,
+  },
+  {
+    name: "Firebase",
+    icon: firebase,
+  },
+  {
+    name: "AWS",
+    icon: aws,
+  }
 ];
 
 const experiences = [
