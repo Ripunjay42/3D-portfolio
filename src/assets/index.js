@@ -15,6 +15,7 @@ import back from "./ser/back.png";
 import devops from "./ser/devops.png";
 import comp from "./ser/comp.png";
 
+import drone from './works/drone.gif'
 import ridewise from './works/ridewise.gif'
 import rce from './works/rce.gif'
 import  jobbox from './works/jobbox.gif'
@@ -85,6 +86,7 @@ export {
   devops,
   comp,
 
+  drone,
   ridewise,
   rce,
   jobbox,

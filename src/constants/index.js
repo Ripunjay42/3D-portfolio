@@ -4,6 +4,7 @@ import {
   devops,
   comp,
 
+  drone,
   ridewise,
   rce,
   jobbox,
@@ -321,6 +322,32 @@ const certifications = [
 ];
 
 const projects = [
+    {
+    name: "Drone Survey Management",
+    description:
+      `A full-stack platform to plan, execute, monitor drone missions, manage fleets, and access survey reports via a user-friendly interface.`,
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      }, 
+      {
+        name: "Expressjs",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Zustand",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "green-text-gradient",
+      },
+    ],
+    image: drone,
+    source_code_link: "https://github.com/Ripunjay42/drone_servey.git",
+    website_link: 'https://dronesurveymanager.vercel.app',
+  },  
   {
     name: "RIDEWISE:Ride Booking System",
     description:
