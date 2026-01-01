@@ -15,6 +15,7 @@ import back from "./ser/back.png";
 import devops from "./ser/devops.png";
 import comp from "./ser/comp.png";
 
+import rag from './works/rag.gif'
 import drone from './works/drone.gif'
 import ridewise from './works/ridewise.gif'
 import rce from './works/rce.gif'
@@ -42,11 +43,15 @@ import  flask from "./tech/flask.png";
 import django from "./tech/django.png";
 import express from "./tech/express.png";
 import nodejs from "./tech/nodejs.png";
+import jwt from "./tech/jwt.png";
 import spring_boot from "./tech/spring_boot.png";
 import mysql from "./tech/mysql.png";
 import postgresql from "./tech/postgresql.png";
 import sqlite from "./tech/sqlite.png";
 import mongodb from "./tech/mongo.png";
+import redis from "./tech/redis.png";
+import quadrant from "./tech/quadrant.png";
+import rabbitmq from "./tech/rabbitmq.png";
 import linux from "./tech/linux.png";
 import bash from "./tech/bash.png";
 import git from "./tech/git.png";
@@ -86,6 +91,7 @@ export {
   devops,
   comp,
 
+  rag,
   drone,
   ridewise,
   rce,
@@ -113,11 +119,15 @@ export {
   django,
   express,
   nodejs,
+  jwt,
+  rabbitmq,
   spring_boot,
   mysql,
   postgresql,
   sqlite,
   mongodb,
+  redis,
+  quadrant,
   linux,
   bash,
   git,

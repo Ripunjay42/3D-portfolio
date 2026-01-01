@@ -4,6 +4,7 @@ import {
   devops,
   comp,
 
+  rag,
   drone,
   ridewise,
   rce,
@@ -32,10 +33,14 @@ import {
   express,
   nodejs,
   spring_boot,
+  jwt,
+  rabbitmq,
   mysql,
   postgresql,
   sqlite,
-  mongodb,  
+  mongodb,
+  redis,
+  quadrant, 
   linux,
   bash,
   git,
@@ -61,17 +66,14 @@ import { FaUser, FaNetworkWired, FaProjectDiagram, FaLaptopCode, FaEnvelope } fr
 
 
 
-export const about = `I am a tech enthusiast and problem solver with a passion for programming and design.
-                     I love to create and build things that are meaningful and impactful.
+export const about = `I am a tech enthusiast and problem solver with a strong passion for software development and system design. 
+I hold a B.Sc. (Hons) in Computer Science (CBCS) from L.C.B. College, Guwahati, 
+and have completed my Master of Computer Applications (MCA) from Tezpur University.
 
-                      I was born and raised in Assam.
-                      I have completed my graduation in B.sc(Hons)CBCS Computer Science from L.C.B College(Guwahati)
-                      and I am currently pursuing Master of Computer Applications(MCA) at Tezpur University.
-
-                      My programming journey began with C++, which sparked my interest in problem-solving and competitive programming. 
-                      Over time, I expanded my expertise to full-stack development, working with React, Next.js, Express.js, PostgreSQL,
-                      among other technologies. I actively solve problems on LeetCode, continuously refining my skills in algorithms, 
-                      and scalable application development..`;
+My programming journey began with C++, building a solid foundation in problem-solving and algorithms. 
+Over time, I expanded into full-stack development, working with technologies such as React, Next.js, Express.js, and PostgreSQL. 
+I am currently working as a Full Stack Developer at C-DAC, Bangalore, focusing on building scalable, efficient, and impactful applications. 
+I actively solve problems on LeetCode to continuously refine my algorithmic and system design skills..`;
 
 export const navLinks = [
   {
@@ -169,10 +171,10 @@ const technologies = [
       name: "Tailwind",
       icon: tailwind,
   },
-  {
-    name: "Bootstrap",
-    icon: bootstrap,
-  },
+  // {
+  //   name: "Bootstrap",
+  //   icon: bootstrap,
+  // },
 
   {
     name: "Flask",
@@ -190,18 +192,26 @@ const technologies = [
     name: "NodeJS",
     icon: nodejs,
   },
+  // {
+  //     name: "Spring Boot",
+  //     icon: spring_boot,
+  // },
   {
-      name: "Spring Boot",
-      icon: spring_boot,
+    name: "JWT",
+    icon: jwt,
+  },
+  {
+    name: "RabbitMQ",
+    icon: rabbitmq,
   },
   {
     name: "Mysql",
     icon: mysql,
   },
-  {
-      name: "Sqlite3",
-    icon: sqlite,
-  },
+  // {
+  //     name: "Sqlite3",
+  //   icon: sqlite,
+  // },
   
  
   {
@@ -211,6 +221,14 @@ const technologies = [
   {
     name: "MongoDB",
     icon: mongodb,
+  },
+  {
+    name: "Redis",
+    icon: redis,
+  },
+  {
+    name: "Quadrant",
+    icon: quadrant,
   },
   {
     name: "Linux",
@@ -243,6 +261,28 @@ const technologies = [
 ];
 
 const experiences = [
+   {
+    title: "Software Developer",
+    company_name: "CDAC, Bangalore",
+    icon: cdac,
+    iconBg: "#013247",
+    date: "Aug 2025 - Present",
+    points: [
+        "Designed and implemented a complete DLMS/COSEM firmware upgrade flow (Steps 0–7) for smart meters.",
+        "Built DLMS/COSEM request–response handling (GET/SET/ACTION) over TCP with payload construction and validation.",
+        "Implemented block-wise firmware transfer from Intel HEX files with binary extraction and block tracking.",
+        "Added OctetString length encoding (0–65535+ bytes) and adaptive block sizing for reliable transfers.",
+        "Implemented state-based transfer tracking using image_transfer_status (0–7) with retry and timeout handling.",
+        "Enabled resume, recovery, and auditability through persistent storage of transfer context and block metadata.",
+
+        "Built a modular admin control dashboard with card-based navigation and inline configuration panels.",
+        "Implemented end-to-end license request handling, including creation, approval, editing, filtering, and pagination.",
+        "Developed group, host, and inventory management workflows with OEM and tool mapping support.",
+        "Implemented feature access policy management using Include/Exclude and global rule application.",
+        "Built license governance mechanisms covering limits, overdraft, timeout, and linger policies.",
+        "Implemented secure request handling and session management using token-based authentication and controlled logout."
+    ],
+  },
   {
     title: "Full-Stack Developement Intern",
     company_name: "CDAC, Bangalore",
@@ -322,6 +362,48 @@ const certifications = [
 ];
 
 const projects = [
+    {
+    name: "AI-Powered Document Query System",
+    description:
+      `A full-stack RAG (Retrieval-Augmented Generation) application that enables users to upload documents and interact with them through an intelligent chat interface powered by Google's Gemini AI.`,
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      }, 
+      {
+        name: "Expressjs",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Zustand",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "PostgreSQL",
+        color: "green-text-gradient",
+      },
+      {
+        name : "Redis",
+        color : "green-text-gradient", 
+      },
+      {
+        name : "rabbit mq",
+        color : "pink-text-gradient", 
+      },
+      {
+        name : "Quadrant",
+        color : "green-text-gradient",
+      },
+      {
+        name : "Gemini",
+        color : "blue-text-gradient",
+      }
+    ],
+    image: rag,
+    source_code_link: "https://github.com/Ripunjay42/Ai_assistant.git",
+    website_link: 'https://query-quill-nu.vercel.app',
+  },  
     {
     name: "Drone Survey Management",
     description:
